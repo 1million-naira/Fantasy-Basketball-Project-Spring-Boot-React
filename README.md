@@ -44,6 +44,16 @@ Please choose the structure of the contents of this repository that suits the ne
 3. Change the current directory to the Java Spring Boot project using the command:
 > cd NewTopSquadProject
 
+This project uses a local MySQL database. You can create the required database using MySQL Workbench:
+
+* **Open MySQL Workbench** and connect to your local MySQL server (host: `127.0.0.1`, port: `3306`, username: `root`, password: `password`).
+* Make sure to have MySQL community server downloaded first!
+
+* **Create a new database**:
+   * Open the SQL editor at that connection and run command:
+  > CREATE DATABASE TopSquad;
+
+
 4. Then run this command to run all the dependencies needed for the Java project:
 > ./gradlew build
 
