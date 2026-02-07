@@ -1,0 +1,35 @@
+.playerButtonCard{
+    width: 130px;
+    height: 254px;
+    background: #cecfd0;
+    border: none;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.playerButtonCard:hover{
+    transform: translateY(-1px);
+}
+
+.playerButtonCard img{
+    width: 70px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.playerName{
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 8px 0 4px;
+    height: 50px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playerPosition, .playerValue{
+    font-size: 0.95em;
+}

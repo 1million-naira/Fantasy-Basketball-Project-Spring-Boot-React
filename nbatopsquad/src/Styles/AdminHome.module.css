@@ -1,0 +1,42 @@
+.appStatus{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menuContent{
+    height: 100vh;
+    display: flex;
+}
+
+.moderate{
+    width: 50%;
+}
+
+.reports{
+    width: 100%;
+}
+
+.usersAndLeagues{
+    width: 100%;
+}
+
+
+.updates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 2rem;
+}
+
+.updates button{
+    width: 200px;
+}
+
+.updateOptions{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}

@@ -1,0 +1,174 @@
+.leagueView{
+    display: flex;
+    padding: 1rem;
+}
+
+.leaderboard{
+    width: 50%;
+    text-align: center;
+}
+
+.leagueTable{
+    height: 500px;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    scroll-snap-type: y mandatory;
+}
+
+.leagueTable table{
+    text-align: left;
+}
+
+
+.leagueTable table th{
+    background-color: rgb(235, 232, 232);
+    position: sticky;
+    top: 0;
+}
+
+.leagueTable table tr{
+    scroll-snap-align: start;
+}
+
+.leagueTable table td{
+    width: 20%;
+}
+
+.leagueTable table button{
+    font-size: 0.9em;
+    height: auto;
+}
+
+/* .userInfo{
+    width: 200px;
+} */
+
+.leagueContent{
+    width: 50%;
+}
+
+.leagueContent .leagueInfoContainer{
+    width: 100%;
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.leagueInfoContainer h1{
+    text-align: left;
+    border-bottom: 1px solid lightgrey;
+    padding: 12px;
+}
+
+.leagueInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.info{
+    width: 60%;
+}
+
+.info p{
+    font-weight: 600;
+    font-size: 1.4em;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+}
+
+.info h6{
+    font-weight: 300;
+    font-size: 1.1em;
+    margin-top: auto;
+}
+
+/* .leagueContent div{
+    margin-top: 1rem;
+} */
+
+.leagueContentSection{
+    margin-top: 1rem;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2rem;
+}
+
+.chat .messages{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.messages .userMessages{
+    margin-left: auto;
+}
+
+.message .messageText{
+    background: rgb(230, 225, 225);
+    border-radius: 10px;
+    width: 300px;
+    padding: 1rem;
+}
+
+.message .sender{
+    font-size: 0.8rem;
+}
+
+.chat .send{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.topPerformersContainer h3{
+    text-align: center;
+}
+
+.topPerformers{
+    display: flex;
+    height: 350px;
+    align-items: center;
+    justify-content: start;
+    overflow-x: scroll;
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.topPerformer{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.topPerformer img{
+    width: 70px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.topPerformer p{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}

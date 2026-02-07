@@ -1,0 +1,265 @@
+.home{
+    display: flex;
+    justify-content: center;
+}
+
+.teamView{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.teamOptions{
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.menu{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuButtons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menuButtons button{
+    width: 33%;
+}
+
+.leaguesMenu{
+    margin-top: 2rem;
+    width: 100%;
+}
+.leagueButtons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.leagueButtons button{
+    width: 33%;
+}
+
+.leagueForms{
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.leagueForm{
+    width: 50%;
+    position: relative;
+}
+
+.leagueForm label{
+    text-align: left;
+}
+
+
+.leagueForm p{
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    font-weight: 400;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.foundLeagues{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.foundLeagues table th{
+    background-color: rgb(235, 232, 232);
+    position: sticky;
+    top: 0;
+}
+
+
+.publicLeagues{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.yourLeagues{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.yourLeagues h4{
+    text-align: center;
+}
+
+.yourLeagues table{
+    width: 100%;
+}
+
+.yourLeagues table th{
+    background-color: rgb(235, 232, 232);
+    position: sticky;
+    top: 0;
+}
+
+
+
+.menuSection{
+    border-bottom: 1px solid gray;
+}
+
+
+.leagues{
+    display: flex;
+    flex-direction: column;
+}
+
+.league{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.userMatches{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.matches{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+
+.matchHeader{
+    position: sticky;
+    top: 0;
+    background-color: rgb(235, 232, 232);
+}
+
+
+.match{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.match div{
+    width: 20%;
+    text-align: center;
+}
+
+.matchParticipant{
+    width: 100%;
+}
+
+.matchParticipant p{
+    width: 100%;
+}
+
+
+.loggedInUser{
+    background-color:#d0e6f7;
+    border-right: 4px solid #3b82f6;
+    font-weight: bold;
+}
+
+.match p{
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+}
+
+.matchWin{
+    color: green;
+    font-weight: bold;
+}
+
+.matchLose{
+    color: red;
+    font-weight: bold;
+}
+
+.matchDraw{
+    color: rgb(131, 127, 127);
+    font-weight: bold;
+}
+
+
+.players{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.currentlySelectedLeague{
+    margin-top: 2rem;
+}
+
+.topPerformers{
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.topPerformer{
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+}
+
+.topPerformer img{
+    width: 70px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}

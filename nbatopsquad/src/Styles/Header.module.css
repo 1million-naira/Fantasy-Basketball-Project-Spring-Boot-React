@@ -1,0 +1,29 @@
+*{
+    font-weight: 500;
+}
+
+.notifications{
+    background-color: rgb(232, 223, 223);
+}
+
+.user{
+    text-transform: uppercase;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    margin: 0 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}

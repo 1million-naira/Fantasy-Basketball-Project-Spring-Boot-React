@@ -1,0 +1,36 @@
+
+.teamContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.points{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.starters{
+    display: flex;
+    flex-direction: column;
+}
+
+.bench{
+    display: flex;
+    flex-direction: column;
+}
+
+.starters div, .bench div{
+    display: flex;
+    gap: 0.5rem;
+}

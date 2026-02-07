@@ -1,0 +1,2393 @@
+[
+  {
+    "player_name": "Abudushalamu Abudurexiti",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "203",
+    "position": "SF"
+  },
+  {
+    "player_name": "Adonis Arms",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "198",
+    "position": "G"
+  },
+  {
+    "player_name": "Bai Haotian",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "194",
+    "position": "PG"
+  },
+  {
+    "player_name": "Paris Bass",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "207",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Kavell Bigby-Williams",
+    "league": "CBA",
+    "nationality": "British",
+    "age": "29",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Eric Bledsoe",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "35",
+    "height": "185",
+    "position": "PG"
+  },
+  {
+    "player_name": "Askia Booker",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "31",
+    "height": "186",
+    "position": "G"
+  },
+  {
+    "player_name": "Jiao Boqiao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "209",
+    "position": "C"
+  },
+
+
+  {
+    "player_name": "Barry Brown Jr.",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "28",
+    "height": "190",
+    "position": "SF"
+  },
+  {
+    "player_name": "Lutubula",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "209",
+    "position": "C"
+  },
+  {
+    "player_name": "Linhan Cai",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Josh Carlton",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "26",
+    "height": "209",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Lin Chang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "36",
+    "height": "206",
+    "position": "F"
+  },
+  {
+    "player_name": "Chen Guanzhong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Chen Guohao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "201",
+    "position": "F"
+  },
+  {
+    "player_name": "Chen Linjian",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "31",
+    "height": "197",
+    "position": "SF"
+  },
+  {
+    "player_name": "Chen Peidong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "189",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Ying-Chun Chen",
+    "league": "CBA",
+    "nationality": "Taiwanese",
+    "age": "32",
+    "height": "182",
+    "position": "PG"
+  },
+  {
+    "player_name": "Shuaipeng Cheng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "191",
+    "position": "SG"
+  },
+  {
+    "player_name": "Marquese Chriss",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "206",
+    "position": "PF"
+  },
+
+  {
+    "player_name": "Tyshaun Crawford",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "25",
+    "height": "216",
+    "position": "C"
+  },
+  {
+    "player_name": "Jinming Cui",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "195",
+    "position": "G"
+  },
+  {
+    "player_name": "Xiaolong Cui",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "194",
+    "position": "G"
+  },
+  {
+    "player_name": "Hao Dai",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "195",
+    "position": "G"
+  },
+  {
+    "player_name": "Ruibo Dang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "199",
+    "position": "F"
+  },
+  {
+    "player_name": "Ronald Delph",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "32",
+    "height": "215",
+    "position": "C"
+  },
+  {
+    "player_name": "Xiaochuan Zhai",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "205",
+    "position": "SF"
+  },
+  {
+    "player_name": "Hamidou Diallo",
+    "league": "CBA",
+    "nationality": "Guinean",
+    "age": "26",
+    "height": "198",
+    "position": "SG"
+  },
+  {
+    "player_name": "Haoran Ding",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "206",
+    "position": "PF"
+  },
+  {
+    "player_name": "Hao Dong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "William Douglas",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "26",
+    "height": "196",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Bochao Du",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "206",
+    "position": "F/C"
+  },
+
+  {
+    "player_name": "Angjun Duan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Ibrahima Fall Faye",
+    "league": "CBA",
+    "nationality": "Senegalese",
+    "age": "28",
+    "height": "207",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Ziming Fan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Fanbo Zeng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "211",
+    "position": "C/F"
+  },
+  {
+    "player_name": "Jiachen Fang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Shuo Fang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "34",
+    "height": "189",
+    "position": "PG"
+  },
+
+  {
+    "player_name": "Feng Mingzhen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Jordan Floyd",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "28",
+    "height": "188",
+    "position": "G"
+  },
+  {
+    "player_name": "Kyle Fogg",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "35",
+    "height": "191",
+    "position": "G"
+  },
+  {
+    "player_name": "Hao Fu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "208",
+    "position": "C"
+  },
+  {
+    "player_name": "Gao Shiao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "225",
+    "position": "C"
+  },
+  {
+    "player_name": "ShiYan Gao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "186",
+    "position": "PG"
+  },
+  {
+    "player_name": "Ge Haoran",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "ZhaoBao Ge",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "213",
+    "position": "C"
+  },
+  {
+    "player_name": "Marcus Georges-Hunt",
+    "league": "CBA",
+    "nationality": "U.S. Virgin Islands",
+    "age": "31",
+    "height": "196",
+    "position": "F"
+  },
+  {
+    "player_name": "Eugene German",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "183",
+    "position": "PG"
+  },
+  {
+    "player_name": "Harry Giles III",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "208",
+    "position": "F"
+  },
+  {
+    "player_name": "Troy Gillenwater",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "36",
+    "height": "205",
+    "position": "F"
+  },
+  {
+    "player_name": "Trae Golden",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "33",
+    "height": "189",
+    "position": "PG"
+  },
+  {
+    "player_name": "Archie Goodwin",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "196",
+    "position": "G"
+  },
+  {
+    "player_name": "Brandon Goodwin",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "188",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Jarmar Gulley",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "34",
+    "height": "196",
+    "position": "SF"
+  },
+  {
+    "player_name": "Guo Ailun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "31",
+    "height": "189",
+    "position": "SG"
+  },
+  {
+    "player_name": "Haowen Guo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "201",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Kai Guo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "204",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Qifang Guo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Ashton Hagans",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "25",
+    "height": "191",
+    "position": "PG"
+  },
+  {
+    "player_name": "Jiao Hailong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "208",
+    "position": "C"
+  },
+  {
+    "player_name": "Javion Hamlet",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "193",
+    "position": "G"
+  },
+  {
+    "player_name": "Dejun Han",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "38",
+    "height": "215",
+    "position": "C"
+  },
+  {
+    "player_name": "Han Peiyu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "205",
+    "position": "PF"
+  },
+  {
+    "player_name": "Jalen Harris",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "26",
+    "height": "196",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Javontae Hawkins",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "31",
+    "height": "196",
+    "position": "G"
+  },
+  {
+    "player_name": "He Jiachen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "198",
+    "position": "SF"
+  },
+  {
+    "player_name": "He Siyu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "197",
+    "position": "SF"
+  },
+  {
+    "player_name": "Xining He",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "195",
+    "position": "SG"
+  },
+  {
+    "player_name": "Hong Xin",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "197",
+    "position": "F"
+  },
+  {
+    "player_name": "Peizuo Hou",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "200",
+    "position": "SF"
+  },
+  {
+    "player_name": "Jordan Howard",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "180",
+    "position": "PG"
+  },
+  {
+    "player_name": "Jinqiu Hu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Junlin Hu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "181",
+    "position": "G"
+  },
+  {
+    "player_name": "Mingxuan Hu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "191",
+    "position": "PG"
+  },
+  {
+    "player_name": "Xiaolong Hu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+
+  {
+    "player_name": "Huang Rongqi",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "189",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Yichao Huang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "196",
+    "position": "SG"
+  },
+  {
+    "player_name": "Frank Jackson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "190",
+    "position": "SG"
+  },
+  {
+    "player_name": "Scottie James",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "28",
+    "height": "202",
+    "position": "F"
+  },
+  {
+    "player_name": "Ji Zhuo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "209",
+    "position": "PF"
+  },
+  {
+    "player_name": "Cheng Jia",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "209",
+    "position": "PF"
+  },
+  {
+    "player_name": "Jia Hao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "194",
+    "position": "F/G"
+  },
+  {
+    "player_name": "Haoran Jiang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "205",
+    "position": "C"
+  },
+  {
+    "player_name": "Jiang Linjun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Weizhe Jiang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "182",
+    "position": "PG"
+  },
+  {
+    "player_name": "Jiang Wen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "189",
+    "position": "G"
+  },
+  {
+    "player_name": "Jiang Yuxing",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "193",
+    "position": "SF"
+  },
+  {
+    "player_name": "Taruike Jianiyou",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "208",
+    "position": "C"
+  },
+  {
+    "player_name": "Yipeng Jin",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Markell Johnson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "26",
+    "height": "188",
+    "position": "PG"
+  },
+  {
+    "player_name": "Damian Jones",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "210",
+    "position": "C"
+  },
+  {
+    "player_name": "Dominique Jones",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "36",
+    "height": "193",
+    "position": "G"
+  },
+
+  {
+    "player_name": "Louis King",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "26",
+    "height": "201",
+    "position": "F"
+  },
+  {
+    "player_name": "Nathan Knight",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "208",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Degao Kong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "197",
+    "position": "F"
+  },
+  {
+    "player_name": "Vladyslav Koreniuk",
+    "league": "CBA",
+    "nationality": "Ukrainian",
+    "age": "31",
+    "height": "210",
+    "position": "C"
+  },
+  {
+    "player_name": "Christ Koumadje",
+    "league": "CBA",
+    "nationality": "Chadian",
+    "age": "28",
+    "height": "223",
+    "position": "C"
+  },
+  {
+    "player_name": "Tomas Kyzlink",
+    "league": "CBA",
+    "nationality": "Czech Republic",
+    "age": "32",
+    "height": "198",
+    "position": "SG"
+  },
+  {
+    "player_name": "Lai Junhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "206",
+    "position": "C"
+  },
+  {
+    "player_name": "Dedric Lawson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "206",
+    "position": "F/C"
+  },
+  {
+    "player_name": "T.J. Leaf",
+    "league": "CBA",
+    "nationality": "Israeli",
+    "age": "28",
+    "height": "208",
+    "position": "F"
+  },
+
+  {
+    "player_name": "JeQuan Lewis",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "186",
+    "position": "PG"
+  },
+  {
+    "player_name": "Binzhuo Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Chengyao Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Li Hongquan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Huyi Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Jianghuai Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "190",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Jinxiao Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "206",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Li Muhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "220",
+    "position": "C"
+  },
+
+  {
+    "player_name": "Weihao Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "204",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Xiaoxu Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "35",
+    "height": "207",
+    "position": "C"
+  },
+  {
+    "player_name": "Yanzhe Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "213",
+    "position": "C"
+  },
+
+  {
+    "player_name": "Yiyang Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "181",
+    "position": "PG"
+  },
+  {
+    "player_name": "Zhanglin Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "204",
+    "position": "F"
+  },
+  {
+    "player_name": "Zonglin Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+
+  {
+    "player_name": "Sanning Liao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "189",
+    "position": "G"
+  },
+  {
+    "player_name": "Lin Bing Sheng",
+    "league": "CBA",
+    "nationality": "Taiwanese",
+    "age": "28",
+    "height": "186",
+    "position": "G"
+  },
+
+  {
+    "player_name": "Lin Wei",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Yanting Lin",
+    "league": "CBA",
+    "nationality": "Taiwanese",
+    "age": "24",
+    "height": "184",
+    "position": "SG"
+  },
+  {
+    "player_name": "Zeng Lingxuan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "191",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Xiao Liren",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "196",
+    "position": "F"
+  },
+  {
+    "player_name": "Changjiang Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Liu Chuanxing",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "222",
+    "position": "C"
+  },
+  {
+    "player_name": "Dong Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "210",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Liu Guangcen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "201",
+    "position": "SF"
+  },
+  {
+    "player_name": "Liu Guanshan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Liu Jiaxin",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "186",
+    "position": "PG"
+  },
+  {
+    "player_name": "Jinyu Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Liu Lijia",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "206",
+    "position": "C"
+  },
+  {
+    "player_name": "Liu Shuangyu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Tianyi Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "31",
+    "height": "191",
+    "position": "SG"
+  },
+  {
+    "player_name": "XiaoYu Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "36",
+    "height": "190",
+    "position": "PG"
+  },
+  {
+    "player_name": "Yancheng Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "197",
+    "position": "G"
+  },
+  {
+    "player_name": "Liu Yanyu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "210",
+    "position": "C"
+  },
+  {
+    "player_name": "Zexi Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Liu Zeyi",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "202",
+    "position": "F"
+  },
+  {
+    "player_name": "Zheng Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "34",
+    "height": "192",
+    "position": "SG"
+  },
+  {
+    "player_name": "Liu Zhengqing",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Zipeng Liu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Kenneth Lofton Jr.",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "22",
+    "height": "201",
+    "position": "F"
+  },
+  {
+    "player_name": "Marcus Lovett Jr.",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "183",
+    "position": "G"
+  },
+  {
+    "player_name": "Junhu Lyu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "205",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Pengyu Lu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "197",
+    "position": "SF"
+  },
+  {
+    "player_name": "Wenbo Lu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "193",
+    "position": "SG"
+  },
+  {
+    "player_name": "Licheng Luan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "197",
+    "position": "G"
+  },
+  {
+    "player_name": "Hanchen Luo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "184",
+    "position": "PG"
+  },
+  {
+    "player_name": "Luo Kaiwen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "200",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Diancheng Ma",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Guodong Ma",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "213",
+    "position": "C"
+  },
+  {
+    "player_name": "Mingkun Ma",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "195",
+    "position": "SF"
+  },
+  {
+    "player_name": "Yong Ma",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "196",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Ronald March",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "31",
+    "height": "196",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Marin Maric",
+    "league": "CBA",
+    "nationality": "Croatian",
+    "age": "31",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Frank Mason",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "31",
+    "height": "182",
+    "position": "PG"
+  },
+  {
+    "player_name": "Mangok Mathiang",
+    "league": "CBA",
+    "nationality": "South Sudanese",
+    "age": "32",
+    "height": "208",
+    "position": "C"
+  },
+  {
+    "player_name": "Tahjere McCall",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "193",
+    "position": "G"
+  },
+  {
+    "player_name": "Lei Meng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "196",
+    "position": "SG"
+  },
+  {
+    "player_name": "Zikai Meng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "205",
+    "position": "PF"
+  },
+  {
+    "player_name": "Mi Ali",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Jordan Mickey",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "203",
+    "position": "F/C"
+  },
+
+  {
+    "player_name": "Dallas Moore",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "185",
+    "position": "PG"
+  },
+  {
+    "player_name": "Eric Moreland",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "33",
+    "height": "208",
+    "position": "F/C"
+  },
+  {
+    "player_name": "Yongkang Ni",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "205",
+    "position": "C"
+  },
+  {
+    "player_name": "Ning Hongyu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "210",
+    "position": "F"
+  },
+  {
+    "player_name": "Chris Obekpa",
+    "league": "CBA",
+    "nationality": "Nigerian",
+    "age": "31",
+    "height": "206",
+    "position": "PF"
+  },
+  {
+    "player_name": "Nuni Omot",
+    "league": "CBA",
+    "nationality": "South Sudanese",
+    "age": "30",
+    "height": "204",
+    "position": "SF"
+  },
+  {
+    "player_name": "Qj Peterson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "183",
+    "position": "PG"
+  },
+
+  {
+    "player_name": "Qin Zilong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "",
+    "position": ""
+  },
+
+  {
+    "player_name": "Honglin Qu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "207",
+    "position": "C"
+  },
+  {
+    "player_name": "Xiaoyu Qu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "207",
+    "position": "PF"
+  },
+  {
+    "player_name": "Nick Rakocevic",
+    "league": "CBA",
+    "nationality": "Serbian",
+    "age": "27",
+    "height": "211",
+    "position": "F/C"
+  },
+
+  {
+    "player_name": "Junfei Ren",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "35",
+    "height": "203",
+    "position": "PF"
+  },
+  {
+    "player_name": "Junwei Ren",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "35",
+    "height": "202",
+    "position": "PF"
+  },
+  {
+    "player_name": "Grant Riller",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "28",
+    "height": "189",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Weiyun Shao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Zijie Shen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "210",
+    "position": "C"
+  },
+  {
+    "player_name": "Deshaui Shi",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "205",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Kobi Simmons",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "27",
+    "height": "196",
+    "position": "PG"
+  },
+  {
+    "player_name": "Kendall Smith",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "190",
+    "position": "G"
+  },
+  {
+    "player_name": "Terquavion Smith",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "22",
+    "height": "193",
+    "position": "G"
+  },
+  {
+    "player_name": "Richard Solomon",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "33",
+    "height": "208",
+    "position": "C"
+  },
+
+  {
+    "player_name": "Baylee Steele",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "28",
+    "height": "213",
+    "position": "C"
+  },
+  {
+    "player_name": "Ruoyu Su",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "206",
+    "position": "PF"
+  },
+  {
+    "player_name": "Jared Sullinger",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "33",
+    "height": "206",
+    "position": "C"
+  },
+  {
+    "player_name": "Edmond Sumner",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "198",
+    "position": "G"
+  },
+  {
+    "player_name": "Chengxin Sun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Haoqin Sun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "192",
+    "position": "G"
+  },
+  {
+    "player_name": "Sun Minghui",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "187",
+    "position": "G"
+  },
+  {
+    "player_name": "Mingyang Sun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "31",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Tonglin Sun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "206",
+    "position": "C/F"
+  },
+
+  {
+    "player_name": "Yahui Sun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "181",
+    "position": "PG"
+  },
+  {
+    "player_name": "Yansong Sun",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "206",
+    "position": "F"
+  },
+  {
+    "player_name": "HanLin Tao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "34",
+    "height": "208",
+    "position": "C"
+  },
+  {
+    "player_name": "Tao Yanru",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "190",
+    "position": "SG"
+  },
+  {
+    "player_name": "Rashawn Thomas",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "203",
+    "position": "F"
+  },
+  {
+    "player_name": "Trevor Thompson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "31",
+    "height": "210",
+    "position": "C"
+  },
+  {
+    "player_name": "James Thompson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "30",
+    "height": "208",
+    "position": "C/F"
+  },
+
+  {
+    "player_name": "Tian Yuheng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "193",
+    "position": "SG"
+  },
+  {
+    "player_name": "Jeremiah Tilmon",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "26",
+    "height": "208",
+    "position": "F"
+  },
+  {
+    "player_name": "Jiajun Tong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "190",
+    "position": "G"
+  },
+  {
+    "player_name": "Boubacar Toure",
+    "league": "CBA",
+    "nationality": "Senegalese",
+    "age": "29",
+    "height": "213",
+    "position": "C"
+  },
+  {
+    "player_name": "Travis Trice",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "32",
+    "height": "183",
+    "position": "PG"
+  },
+  {
+    "player_name": "Aizi Maiti",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "204",
+    "position": "C"
+  },
+  {
+    "player_name": "Menglin Wan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "192",
+    "position": "SG"
+  },
+  {
+    "player_name": "Fanyi Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Wang Huadong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "203",
+    "position": "F"
+  },
+  {
+    "player_name": "Junjie Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "196",
+    "position": "G"
+  },
+
+  {
+    "player_name": "Wang Shaojie",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "208",
+    "position": "C/F"
+  },
+  {
+    "player_name": "Xinkai Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "41",
+    "height": "197",
+    "position": "SF"
+  },
+  {
+    "player_name": "Xinrui Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "195",
+    "position": "G"
+  },
+  {
+    "player_name": "Yibo Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "185",
+    "position": "PG"
+  },
+
+  {
+    "player_name": "Yilin Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Yingran Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Yunzhang Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "201",
+    "position": "F"
+  },
+  {
+    "player_name": "Zhelin Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "31",
+    "height": "214",
+    "position": "C"
+  },
+  {
+    "player_name": "Zirui Wang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "189",
+    "position": "PG"
+  },
+  {
+    "player_name": "Cheng Wangfan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "181",
+    "position": "PG"
+  },
+  {
+    "player_name": "Davion Warren",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "",
+    "height": "198",
+    "position": "G"
+  },
+  {
+    "player_name": "Quinndary Weatherspoon",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "28",
+    "height": "190",
+    "position": "G"
+  },
+  {
+    "player_name": "Sonny Weems",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "38",
+    "height": "198",
+    "position": "G/F"
+  },
+  {
+    "player_name": "Dez Wells",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "33",
+    "height": "196",
+    "position": "G"
+  },
+  {
+    "player_name": "Weng Jinlang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "195",
+    "position": "G"
+  },
+  {
+    "player_name": "D.J. Wilson",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "29",
+    "height": "208",
+    "position": "F"
+  },
+  {
+    "player_name": "Wu Changze",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "203",
+    "position": "C"
+  },
+
+  {
+    "player_name": "Qian Wu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "188",
+    "position": "PG"
+  },
+  {
+    "player_name": "Quanxi Wu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Tingjia Wu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "181",
+    "position": "SG"
+  },
+  {
+    "player_name": "Xiao Wu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "205",
+    "position": "C"
+  },
+  {
+    "player_name": "Yujia Wu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "200",
+    "position": "F"
+  },
+  {
+    "player_name": "Xiangbo Li",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "203",
+    "position": "F"
+  },
+  {
+    "player_name": "Liyongwei Xie",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "196",
+    "position": "SG"
+  },
+  {
+    "player_name": "Zhijie Xie",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "192",
+    "position": "G"
+  },
+  {
+    "player_name": "Feng Xin",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "182",
+    "position": "PG"
+  },
+  {
+    "player_name": "Jin Xin",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "199",
+    "position": "PF"
+  },
+  {
+    "player_name": "Zhijiang Xing",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "204",
+    "position": "PF"
+  },
+
+  {
+    "player_name": "Xu Junwei",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "206",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Mengjun Xu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "196",
+    "position": "PF"
+  },
+  {
+    "player_name": "Xin Xu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "226",
+    "position": "C"
+  },
+  {
+    "player_name": "Yuzhuo Xu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "199",
+    "position": "G/F"
+  },
+  {
+    "player_name": "ZhongHao Xu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "34",
+    "height": "212",
+    "position": "C"
+  },
+  {
+    "player_name": "Pengfei Yan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "32",
+    "height": "211",
+    "position": "C"
+  },
+  {
+    "player_name": "Shi Yan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "195",
+    "position": "G"
+  },
+  {
+    "player_name": "Yan Shouqi",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "190",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Hansen Yang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "20",
+    "height": "216",
+    "position": "C"
+  },
+  {
+    "player_name": "Yang Jinmeng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "190",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Wenxue Yang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "205",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Gabe York",
+    "league": "CBA",
+    "nationality": "USA",
+    "age": "31",
+    "height": "190",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Changdong Yu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "33",
+    "height": "206",
+    "position": "C"
+  },
+  {
+    "player_name": "Yu Dehao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "190",
+    "position": "PG"
+  },
+  {
+    "player_name": "Guze Yu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "181",
+    "position": "PG"
+  },
+
+  {
+    "player_name": "Yu Xiaohui",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "214",
+    "position": "C"
+  },
+  {
+    "player_name": "Yu Xiaoyong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "189",
+    "position": "G"
+  },
+  {
+    "player_name": "Yu Zechen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "202",
+    "position": "SF"
+  },
+  {
+    "player_name": "Shuai Yuan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "194",
+    "position": "SG"
+  },
+  {
+    "player_name": "Yuan Tangwen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "184",
+    "position": "PG"
+  },
+  {
+    "player_name": "Yuan Zhaoyao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Fanri Zeng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "205",
+    "position": "PF"
+  },
+  {
+    "player_name": "Liwei Zhan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Cairen Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "195",
+    "position": "SF"
+  },
+
+  {
+    "player_name": "Haojia Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "199",
+    "position": "SF"
+  },
+  {
+    "player_name": "Zhang Hongshuo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "23",
+    "height": "201",
+    "position": "PF"
+  },
+
+  {
+    "player_name": "Junhao Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "21",
+    "height": "185",
+    "position": "PG"
+  },
+
+  {
+    "player_name": "Mingchi Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "22",
+    "height": "213",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Wenyi Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+
+  {
+    "player_name": "Xingliang Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Xinyu Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "203",
+    "position": "F"
+  },
+  {
+    "player_name": "Xu Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "200",
+    "position": "F"
+  },
+  {
+    "player_name": "Zhang Yijing",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Yunmeng Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "196",
+    "position": "SF"
+  },
+  {
+    "player_name": "Zhenlin Zhang",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "206",
+    "position": "SF"
+  },
+  {
+    "player_name": "Zhang Zuming",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "205",
+    "position": "F"
+  },
+  {
+    "player_name": "Baiqing Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "204",
+    "position": "C"
+  },
+  {
+    "player_name": "Zhao Jiahao",
+    "league": "CBA",
+    "nationality": "Hong Kong",
+    "age": "",
+    "height": "",
+    "position": "C"
+  },
+  {
+    "player_name": "Jianshu Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "190",
+    "position": "G"
+  },
+  {
+    "player_name": "Jiaren Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "201",
+    "position": "PF"
+  },
+  {
+    "player_name": "Jiayi Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "205",
+    "position": "PF"
+  },
+  {
+    "player_name": "Jiwei Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "184",
+    "position": "PG"
+  },
+  {
+    "player_name": "Zhao Junfeng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "24",
+    "height": "193",
+    "position": "G"
+  },
+  {
+    "player_name": "Rui Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "195",
+    "position": "SG"
+  },
+
+  {
+    "player_name": "Yanhao Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "27",
+    "height": "194",
+    "position": "SG"
+  },
+  {
+    "player_name": "Yiming Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "219",
+    "position": "C"
+  },
+  {
+    "player_name": "Zhou Zhao",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "30",
+    "height": "198",
+    "position": "F"
+  },
+
+  {
+    "player_name": "Zheng Qilong",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "204",
+    "position": "PF"
+  },
+  {
+    "player_name": "Peng Zhou",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "35",
+    "height": "206",
+    "position": "SF"
+  },
+  {
+    "player_name": "Qi Zhou",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "217",
+    "position": "C"
+  },
+  {
+    "player_name": "Zhou Yishan",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "",
+    "height": "",
+    "position": ""
+  },
+  {
+    "player_name": "Junlong Zhu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "200",
+    "position": "SF"
+  },
+
+  {
+    "player_name": "Songwei Zhu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "206",
+    "position": "F"
+  },
+  {
+    "player_name": "Rong Zifeng",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "26",
+    "height": "186",
+    "position": "PG"
+  },
+  {
+    "player_name": "Wang Zilu",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "200",
+    "position": "F"
+  },
+  {
+    "player_name": "Yang Zou",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "25",
+    "height": "198",
+    "position": "F"
+  },
+  {
+    "player_name": "Zou Yuchen",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "28",
+    "height": "206",
+    "position": "C/F"
+  },
+
+  {
+    "player_name": "Zhennian Zuo",
+    "league": "CBA",
+    "nationality": "Chinese",
+    "age": "29",
+    "height": "201",
+    "position": "SF"
+  }
+]

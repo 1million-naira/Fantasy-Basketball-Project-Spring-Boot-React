@@ -1,0 +1,90 @@
+.teamNameForm{
+    margin: auto;
+    text-align: center;
+}
+
+.confirmTeam{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.budget{
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 232, 232);
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    height: 150px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.budget span, .budget p{
+    padding: 10px;
+}
+
+.budget p{
+    text-transform: uppercase;
+}
+
+.selectionButtons{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.selectionButtons div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.select{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+.selection{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.showPlayers{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.selectionView{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.selectionStarters, .selectionBench{
+    display: flex;
+    gap: 1rem;
+}
+
+.deselectButton{
+    margin-top: 2rem;
+}
+
+
+
+

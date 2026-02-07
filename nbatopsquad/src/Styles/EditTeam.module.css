@@ -1,0 +1,14 @@
+.substitutionStage{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.subIn, .subOut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.substitutionStage h3{
+    text-align: center;
+}
