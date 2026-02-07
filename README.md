@@ -1,6 +1,9 @@
 
 # TOPSQUAD Fantasy Basketball 
 
+> The frontend is currently in a prototype stage and may not provide the best user experience. Improvements are planned.
+
+
 
 ## Home screen
 <img width="1512" height="943" alt="Screenshot 2026-02-07 at 01 18 46" src="https://github.com/user-attachments/assets/3734463f-8c1a-41da-85d2-81d4653a2a5f" />
