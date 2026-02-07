@@ -1,6 +1,26 @@
 
 # TOPSQUAD Fantasy Basketball 
 
+
+## Home screen
+<img width="1512" height="943" alt="Screenshot 2026-02-07 at 01 18 46" src="https://github.com/user-attachments/assets/3734463f-8c1a-41da-85d2-81d4653a2a5f" />
+
+
+## Edit team screen (Make changes with existing players in your team)
+<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 00 43" src="https://github.com/user-attachments/assets/9f42f8c8-f267-460a-b905-a3d18e8797fc" />
+
+
+## Transfer screen (Add new players to your team)
+<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 03 06" src="https://github.com/user-attachments/assets/bcf7ba5c-1a53-411f-a0df-a5015bc057e8" />
+
+
+## Admin screen (Includes admin features such as enabling/disabling transfers and moderating users)
+<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 08 33" src="https://github.com/user-attachments/assets/890168c6-e91c-4160-9f6c-41d98b91e8eb" />
+
+## League screen (View a league that you are part of)
+<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 02 18" src="https://github.com/user-attachments/assets/1b93f534-47db-44c5-b247-251150c1f641" />
+
+
 ## Information about this repository
 
 This is the repository that you are going to use **individually** for developing your project. Please use the resources provided in the module to learn about **plagiarism** and how plagiarism awareness can foster your learning.
