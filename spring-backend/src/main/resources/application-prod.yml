@@ -11,7 +11,7 @@ spring:
     name: NewTopSquadProject
   datasource:
     password: ${DB_PASSWORD}
-    url: jdbc:${DB_URL}
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
     username: ${DB_USER}
   jpa:
     hibernate:
