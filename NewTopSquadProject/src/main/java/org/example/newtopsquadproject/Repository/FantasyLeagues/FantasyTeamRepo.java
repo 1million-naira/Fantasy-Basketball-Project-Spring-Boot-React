@@ -20,6 +20,9 @@ public interface FantasyTeamRepo extends CrudRepository<FantasyTeam, Integer> {
     @Query(value="SELECT ft FROM FantasyTeam ft LEFT JOIN FETCH ft.playerTeamStatuses WHERE ft.id = :id")
     Optional<FantasyTeam> findByIdWithPlayerTeamStatuses(@Param("id") int id);
 
+    @Query("SELECT COUNT(ft) + 1 FROM FantasyTeam ft WHERE ft.fantasyPoints > :points")
+    int getRank(@Param("points") int points);
+
     @Modifying
     @Query("DELETE FantasyTeam ft WHERE ft.myUser.id = :id")
     void deleteByUserIdWithJPQL(@Param("id") int id);

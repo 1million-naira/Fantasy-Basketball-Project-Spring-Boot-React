@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface RotoUserLeagueRepo extends UserLeagueRepo {
     Optional<RotoUserLeague> findById(int id);
 
-    List<RotoUserLeague> findAllByCode(String code);
+//    Optional<RotoUserLeague> findByCode(String code);
 }

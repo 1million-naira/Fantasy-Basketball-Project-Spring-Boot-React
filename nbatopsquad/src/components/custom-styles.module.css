@@ -1,0 +1,51 @@
+
+.custom_button {
+    border-radius: 14px;
+    box-shadow: rgba(222, 222, 222, 0.2) 0 1px 7px, rgba(201, 201, 201, 0.03) 0px 1px 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+
+/* Button Size Variants */
+.sm{
+    padding: 4px 10px;
+}
+
+.md{
+    padding: 8px 20px;
+}
+
+.lg{
+    padding: 12px 28px;
+}
+
+
+.heading {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.subheading{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.body {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.button {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.caption {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 100;
+}

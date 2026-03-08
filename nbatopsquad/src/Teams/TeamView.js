@@ -3,6 +3,7 @@ import PlayerCard from "../Players/PlayerCard";
 import styles from "../Styles/TeamView.module.css"
 import { TeamContext } from "../Context/TeamUpdate";
 import { useSelector } from "react-redux";
+import CustomText from "../components/CustomText";
 
 function TeamView(props){
     const {team, setTeam} = useContext(TeamContext)
@@ -17,6 +18,7 @@ function TeamView(props){
             <div className={styles.team}>
                 <div className={styles.starters}>
                     <h3>STARTERS</h3>
+                    {/* <CustomText type="subheading">STARTERS</CustomText> */}
                     <div>
                         {starters.map((player) => 
                         <PlayerCard key={player.id} name={player.name} image={player.image} points={player.points} pos={player.pos}></PlayerCard>

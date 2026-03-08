@@ -103,12 +103,13 @@ public class FantasyTeamService {
         return fantasyTeamDTO;
     }
 
+
     public FantasyTeam updateTeam(FantasyTeam fantasyTeam, List<Integer> playerIds){
 
         int value = 0;
         MyUser myUser = fantasyTeam.getMyUser();
         if(playerIds.size() != 8){
-            throw new ResourceNotFoundException("A team must have 8 players");
+            throw new ValidationException("A team must have 8 players");
         }
         List<PlayerTeamStatus> existingPlayerTeamStatuses = playerTeamStatusRepo.findAllByFantasyTeamId(fantasyTeam.getId());
 

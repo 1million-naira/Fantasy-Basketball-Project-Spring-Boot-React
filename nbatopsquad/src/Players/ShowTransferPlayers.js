@@ -3,6 +3,7 @@ import styles from "../Styles/ShowPlayers.module.css"
 import { TeamContext } from "../Context/TeamUpdate";
 import axios from "axios";
 import Pagination from "../Pagination/Pagination";
+import CustomButton from "../components/CustomButton";
 
 
 function ShowTransferPlayers({currentPos, currentLeague, search}){
@@ -34,18 +35,33 @@ function ShowTransferPlayers({currentPos, currentLeague, search}){
     }, [currentPage])
 
     return(
-        <>
-            <button type="submit" onClick={() => getPlayers()}>Get Players</button>
-            <div className={styles.players}>
-                {players.map((player) => 
-                <div key={player.id} className={styles.player}>
-                    <img src={player.image} alt={player.name}></img>
-                    <p>{player.name}</p>
-                    <p>{player.pos}</p>
-                    <p>{player.value*1000000}</p>
-                    <button onClick={() => transferPlayer(player, currentlySelected)}>Transfer Player</button>
-                </div>
-                )}
+        <div>
+            <div style={{display: 'flex', justifyContent: 'center', marginTop: 12}}>
+                <CustomButton onClick={() => getPlayers()} label='Get Players'/>
+            </div>
+            <div style={{backgroundColor: '#232323', padding: '4px 10px', marginTop: 12, borderRadius: 12}}>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Value</th>
+                            <th>Transfer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {players.length > 0 ? players.map((player) => (
+                            <tr key={player.id}>
+                                <td><img src={player.image} alt={player.name} style={{borderRadius: 50, width: 45, height: 50}}></img></td>
+                                <td>{player.name}</td>
+                                <td>{player.pos}</td>
+                                <td>{player.value} <i class="fa-solid fa-star" style={{color: "var(--header)"}}></i></td>
+                                <td><CustomButton onClick={() => transferPlayer(player, currentlySelected)} label='Transfer Player' size="sm"/></td>
+                            </tr>
+                        )) : <tr><td colSpan="5">No players found</td></tr>}
+                    </tbody>
+                </table>
             </div>
 
             <div className={styles.showPlayerPage}>
@@ -56,7 +72,7 @@ function ShowTransferPlayers({currentPos, currentLeague, search}){
                 paginate={setCurrentPage}
                 />
             </div>
-        </>
+        </div>
     );
 }
 

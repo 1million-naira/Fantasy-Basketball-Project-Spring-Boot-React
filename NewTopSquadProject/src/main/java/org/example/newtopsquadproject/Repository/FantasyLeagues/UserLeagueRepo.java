@@ -5,6 +5,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-@NoRepositoryBean
+import java.util.Optional;
+
 public interface UserLeagueRepo extends CrudRepository<UserLeague, Integer>, PagingAndSortingRepository<UserLeague, Integer> {
+    Optional<UserLeague> findByCode(String code);
 }

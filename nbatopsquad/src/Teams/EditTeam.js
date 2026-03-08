@@ -8,6 +8,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { updateTeam } from "../redux/reducer/teamReducer";
 import { useNavigateBack } from "../Router/NavigateBack";
+import CustomButton from "../components/CustomButton";
 
 
 function EditTeam(){
@@ -35,33 +36,47 @@ function EditTeam(){
     const navigateBack = useNavigateBack("/");
     
     return (
-        <>
-            <button className="goBackButton" onClick={navigateBack}>Go back</button>
-            <EditTeamSession/>
+        <div style={{padding: '5px 25px'}}>
+            {/* <button className="goBackButton" onClick={navigateBack}>Go back</button> */}
+            <CustomButton onClick={navigateBack} label="Go back"/>
 
-            <div className={styles.substitutionStage}>
-                <div className={styles.subIn}>
-                    {starterStage && 
-                    <>
-                    <h3>Substitute out</h3>
-                    <PlayerCard key={starterStage.id} name={starterStage.name} image={starterStage.image}></PlayerCard>
-                    </>
-                    }
+            <div style={{textAlign: 'center', display: 'flex', justifyContent: 'center', gap: 16}}>
+                {/* <CustomButton onClick={() => substitute(currentlySelectedStarter, currentlySelectedBench)} label="Substitute" size='lg'/> */}
+                <CustomButton onClick={() => confirmTeam()} label="Save Changes" size='lg'/>
+            </div>
+            <div style={{display: 'flex', justifyContent: 'space-between', gap: 12, marginTop: 16, padding: '0 10px'}}>
+                <div style={{width: '60%'}}>
+                    <EditTeamSession/>
                 </div>
+                
+                <div style={{width: '35%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <h3 style={{fontStyle: 'italic', fontWeight: 100}}>Tip: Substitute players then save changes</h3>
+                    <div style={{display: 'flex', justifyContent: 'space-evenly', gap: 48}}>
+                        <div className={styles.subIn}>
+                            {starterStage && 
+                            <>
+                            <h2>Substitute out</h2>
+                            <PlayerCard key={starterStage.id} name={starterStage.name} image={starterStage.image}></PlayerCard>
+                            </>
+                            }
+                        </div>
 
-                <div className={styles.subOut}>
-                    {benchStage &&
-                    <>
-                    <h3>Substitute In</h3>
-                    <PlayerCard key={benchStage.id} name={benchStage.name} image={benchStage.image}></PlayerCard>
-                    </>
-                    }
+                        <div className={styles.subOut}>
+                            {benchStage &&
+                            <>
+                            <h2>Substitute In</h2>
+                            <PlayerCard key={benchStage.id} name={benchStage.name} image={benchStage.image}></PlayerCard>
+                            </>
+                            }
+                        </div>
+                    </div>
+
+                    <div style={{marginTop: 24}}>
+                        <CustomButton onClick={() => substitute(currentlySelectedStarter, currentlySelectedBench)} label="Substitute" size='lg'/>
+                    </div>
                 </div>
             </div>
-
-            <button onClick={() => substitute(currentlySelectedStarter, currentlySelectedBench)}>Substitute</button>
-            <button onClick={() => confirmTeam()}>Save Changes</button>
-        </>
+        </div>
     );
 }
 

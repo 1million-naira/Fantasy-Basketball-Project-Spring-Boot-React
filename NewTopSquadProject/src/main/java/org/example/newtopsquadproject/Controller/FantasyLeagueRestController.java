@@ -63,15 +63,15 @@ public class FantasyLeagueRestController {
     }
 
 
-    @GetMapping
-    public ResponseEntity<List<FantasyLeagueDTO>> getLeagueByCode(@RequestParam String code){
-        var principal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        List<FantasyLeagueDTO> fantasyLeagueDTOList = userLeagueService.findByCode(code, principal.getUserId());
-        if(fantasyLeagueDTOList.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(fantasyLeagueDTOList, HttpStatus.OK);
-    }
+//    @GetMapping
+//    public ResponseEntity<List<FantasyLeagueDTO>> getLeagueByCode(@RequestParam String code){
+//        var principal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        List<FantasyLeagueDTO> fantasyLeagueDTOList = userLeagueService.findByCode(code, principal.getUserId());
+//        if(fantasyLeagueDTOList.isEmpty()){
+//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//        }
+//        return new ResponseEntity<>(fantasyLeagueDTOList, HttpStatus.OK);
+//    }
 
     @GetMapping("/h2h/{id}/matches")
     public ResponseEntity<List<UserMatchDTO>> getMatchesInLeague(@PathVariable("id") int leagueId){
@@ -124,7 +124,10 @@ public class FantasyLeagueRestController {
     }
 
     @PostMapping("/{id}/member")
-    public ResponseEntity<UserLeagueStatusDTO> joinLeague(@PathVariable("id") int id){
+    public ResponseEntity<UserLeagueStatusDTO> joinLeague(@PathVariable int id, @RequestParam(defaultValue = "") String code){
+        if(!code.trim().isEmpty()){
+            id = userLeagueService.findByCode(code);
+        }
         var principal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         UserLeagueStatus userLeagueStatus = userLeagueService.joinLeague(principal.getUserId(), id);
         UserLeagueStatusDTO userLeagueStatusDTO = userLeagueService.userLeagueStatusToDto(userLeagueStatus);

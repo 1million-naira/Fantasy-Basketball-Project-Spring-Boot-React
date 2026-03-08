@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import CustomButton from "../components/CustomButton";
 
 
 
@@ -17,7 +18,7 @@ function SignUp({setLogin}){
     const handleSignUp = (e) => {
         e.preventDefault();
 
-        axios.post("http://localhost:8080/api/auth/regsiter", inputs)
+        axios.post("http://localhost:8080/api/auth/register", inputs)
         .then((response) => {
             console.log(response.data);
             toast.success("Account successfully created! Please Login", {autoClose: 5000, hideProgressBar:true, pauseOnHover:true});
@@ -25,51 +26,49 @@ function SignUp({setLogin}){
         })
         .catch((error) => {
             console.log(error);
+            console.log(inputs);
             toast.error("Sign up could not be completed! Please try again", {autoClose: 5000, hideProgressBar:true, pauseOnHover:true});
         });
     }
     return (
-        <>
-            <div className="container">
-                <div className="form-container">
-                    <div className="header">
-                        <div className="text">Sign Up</div>
-                        <div className="underline"></div>
-                    </div>
-                    <form>
-                        <div className="inputs">
-                            <div className="input">
-                                <i className="fa-regular fa-user"></i>
-                                <input type="text" placeholder="Username" onChange={handleChange}></input>
-                            </div>
+        <div style={{width: '100%'}}>
+            <div className="form-container">
+                <div>
+                    <h2 style={{textAlign: 'center'}}>Sign Up</h2>
+                </div>
+                <form>
+                    <div className="inputs">
+                        <div style={{ position: 'relative', marginTop: 8}}>
+                            <i className="fa-regular fa-user"></i>
+                            <input type="text" placeholder="Username" name="username" onChange={handleChange}></input>
+                        </div>
 
-                            <div className="input">
-                                <i className="fa-regular fa-envelope"></i>
-                                <input type="email" placeholder="Email" onChange={handleChange}></input>
-                            </div>
+                        <div style={{ position: 'relative', marginTop: 8}}>
+                            <i className="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Email" name="email" onChange={handleChange}></input>
+                        </div>
 
-                            <div className="input">
-                                <i className="fa-solid fa-lock"></i>
-                                <input type="password" placeholder="Password" onChange={handleChange}></input>
-                            </div>
+                        <div style={{ position: 'relative', marginTop: 8}}>
+                            <i className="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" name="password" onChange={handleChange}></input>
+                        </div>
 
-                            <div className="submit-container">
-                                <div className="submit">
-                                    <button className="auth-button" onClick={(e) => handleSignUp(e)}>Sign Up</button>
-                                </div>
-                                <div className="form-prompt">
-                                    <span>OR</span>
-                                    <span>ALREADY HAVE AN ACCOUNT?</span>
-                                </div>
-                                <div className="submit">
-                                    <button  onClick={() => setLogin(true)} className="auth-button">Log In</button>
-                                </div>
+                        <div className="submit-container">
+                            <div style={{width: '100%', marginTop: 8}}>
+                                <CustomButton onClick={(e) => handleSignUp(e)} label='Sign Up'/>
+                            </div>
+                            <div style={{textAlign: 'center', marginTop: 8}}>
+                                <span>OR</span>
+                                <span>ALREADY HAVE AN ACCOUNT?</span>
+                            </div>
+                            <div style={{width: '100%', marginTop: 8}}>
+                                <CustomButton onClick={() => setLogin(true)} label='Log In'/>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
-        </>
+        </div>
     );
 };
 

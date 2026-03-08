@@ -1,11 +1,19 @@
 .playerButtonCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 130px;
-    height: 254px;
-    background: #cecfd0;
+    min-height: 180px;
+    background: #232323;
     border: none;
     border-radius: 20px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    padding: 8px;
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.35),
+        0 2px 4px rgba(23, 91, 91, 0.15);
 }
 
 .playerButtonCard:hover{
@@ -17,11 +25,14 @@
     height: 90px;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    opacity: 0.8;
 }
 
 .playerName{
     font-size: 1.1em;
-    font-weight: 500;
+    text-align: center;
+    /* width: 100%; */
+    /* font-weight: 500; */
     margin: 8px 0 4px;
     height: 50px;
     overflow-y: auto;
@@ -31,5 +42,5 @@
 }
 
 .playerPosition, .playerValue{
-    font-size: 0.95em;
+    font-size: 0.85em;
 }

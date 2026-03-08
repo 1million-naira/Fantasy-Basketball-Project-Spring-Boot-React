@@ -1,14 +1,82 @@
+html {
+  --background: #181717;
+  --header: #175B5B;
+  --textPrimary: #F2F3ED;
+  --monoHeader: #218484;
+  --lighterHeader: #5eaaaa;
+  --secondaryBackground: #232323;
+  --thirdBackground: #201E1E;
+}
+
+
 body {
   margin: 0;
   font-family: "Outfit", sans-serif;
   letter-spacing: 1px;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
+  background-color: var(--background);
+}
 
+h1, h2, h3 {
+  font-weight: 200;
+  color: var(--textPrimary);
+}
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h4, h5, h6 {
+  font-weight: 100;
+  color: var(--textPrimary);
+}
+
+li, span, a, p, label {
+  list-style: none;
+  font-weight: lighter;
+  color: var(--textPrimary);
+}
+
+.button-link {
+  border-radius: 14px;
+  box-shadow: rgba(222, 222, 222, 0.2) 0 1px 7px, rgba(201, 201, 201, 0.03) 0px 1px 4px;
+  background-color: #218484;
+  color: var(--textPrimary);
+  border: none;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+button {
+    color: var(--textPrimary);
+    border: none;
+    font-weight: 200;
+    cursor: 'pointer';
+    font-family: inherit;
+}
+
+input, select, textarea {
+    color: var(--textPrimary);
+    background: none;
+    font-family: inherit;
+    font-weight: 100;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
+/* select {
+  padding: 8px 12px;
+} */
+
+input:focus {
+  outline: none;
+}
+
+.fa-solid, .fa-regular {
+    font-size: 1rem;
+    color: var(--textPrimary)
 }
 
 code {
@@ -17,49 +85,11 @@ code {
 }
 
 header{
-  position: sticky;
+  position: relative;
   top: 0;
-  background-color: #ebe7e7;
+  background-color: var(--header);
 }
 
-/* button{
-  font-family: "Outfit", sans-serif;
-  cursor: pointer;
-} */
-
-button:not(.playerButton) {
-  background-color: #FFFFFF;
-  border: 0;
-  border-radius: .5rem;
-  box-sizing: border-box;
-  color: #111827;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: .875rem;
-  font-weight: 600;
-  line-height: 1.25rem;
-  padding: .75rem 1rem;
-  text-align: center;
-  text-decoration: none #D1D5DB solid;
-  text-decoration-thickness: auto;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-button:not(.playerButton):hover {
-  background-color: rgb(249,250,251);
-}
-
-button:not(.playerButton)focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-button:not(.playerButton):focus-visible {
-  box-shadow: none;
-}
 
 
 
@@ -75,6 +105,11 @@ table{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+th, td{
+  color: var(--textPrimary);
+  font-weight: 300;
+}
+
 table thead tr{
   text-align: left;
   font-weight: bold;
@@ -84,47 +119,22 @@ table th, table td{
   padding: 12px 15px;
 }
 
-table tbody tr{
-  border-bottom: 1px solid lightgray;
-}
+/* table tbody tr{
+  border: 1px solid rgba(255, 255, 255, 0.4);
+} */
 
-table tbody tr:nth-of-type(even){
+/* table tbody tr:nth-of-type(even){
   background-color: #f3f3f3;
-}
+} */
 
-table tbody tr:last-of-type{
-  border-bottom: 2px solid lightgray;
-}
+/* table tbody tr:last-of-type{
+  border: 1px solid rgba(255, 255, 255, 0.4);
+} */
 
 form div{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-input{
-  border: none;
-  appearance: none;
-  background: #f2f2f2;
-  outline: none;
-}
-
-
-select {
-  /* border: 2px solid lightgray; */
-  border: none;
-}
-
-input, select{
-  transition: border-color 0.3s ease;
-  padding: 7px;
-  border-radius: 3px;
-  margin-bottom: 12px;
-}
-
-
-input:focus, select:focus{
-  border-color: #ccc6c6;
 }
 
 

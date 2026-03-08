@@ -1,0 +1,19 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+security:
+  jwt:
+    secret-key: dev-jwt-key
+spring:
+  application:
+    name: NewTopSquadProject
+  datasource:
+    url: jdbc:mysql://localhost:3306/TopSquad
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true

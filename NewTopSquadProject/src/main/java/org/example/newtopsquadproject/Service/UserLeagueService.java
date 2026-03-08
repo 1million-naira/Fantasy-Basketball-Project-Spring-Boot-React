@@ -9,8 +9,6 @@ import org.example.newtopsquadproject.Model.DTO.UserLeagueStatusDTO;
 import org.example.newtopsquadproject.Model.Enums.HeadToHeadLeagueType;
 import org.example.newtopsquadproject.Model.Enums.LeagueTypeEnum;
 import org.example.newtopsquadproject.Model.FantasyLeagues.*;
-import org.example.newtopsquadproject.Model.Notification.UserNotification;
-import org.example.newtopsquadproject.Model.Notification.NotificationType;
 import org.example.newtopsquadproject.Model.Players.MyUser;
 import org.example.newtopsquadproject.Model.Players.Player;
 import org.example.newtopsquadproject.Model.Players.PlayerTeamStatus;
@@ -21,8 +19,6 @@ import org.example.newtopsquadproject.Utils.LeagueDuration;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +32,8 @@ import java.util.stream.Collectors;
 public class UserLeagueService {
     private final HeadToHeadUserLeagueRepo headToHeadUserLeagueRepo;
     private final RotoUserLeagueRepo rotoUserLeagueRepo;
+
+    private final UserLeagueRepo userLeagueRepo;
     private final UserLeagueStatusRepo userLeagueStatusRepo;
 
     private final LeagueMessageRepo leagueMessageRepo;
@@ -52,9 +50,12 @@ public class UserLeagueService {
 
     private final PlayerService playerService;
 
-    public UserLeagueService(HeadToHeadUserLeagueRepo headToHeadUserLeagueRepo, RotoUserLeagueRepo rotoUserLeagueRepo, UserLeagueStatusRepo userLeagueStatusRepo, LeagueMessageRepo leagueMessageRepo, UserMatchRepo userMatchRepo, MyUserRepo myUserRepo, NotificationService notificationService, LeagueRoundRepo leagueRoundRepo, PlayerTeamStatusRepo playerTeamStatusRepo, PlayerService playerService) {
+    private final FantasyTeamRepo fantasyTeamRepo;
+
+    public UserLeagueService(HeadToHeadUserLeagueRepo headToHeadUserLeagueRepo, RotoUserLeagueRepo rotoUserLeagueRepo, UserLeagueRepo userLeagueRepo, UserLeagueStatusRepo userLeagueStatusRepo, LeagueMessageRepo leagueMessageRepo, UserMatchRepo userMatchRepo, MyUserRepo myUserRepo, NotificationService notificationService, LeagueRoundRepo leagueRoundRepo, PlayerTeamStatusRepo playerTeamStatusRepo, PlayerService playerService, FantasyTeamRepo fantasyTeamRepo) {
         this.headToHeadUserLeagueRepo = headToHeadUserLeagueRepo;
         this.rotoUserLeagueRepo = rotoUserLeagueRepo;
+        this.userLeagueRepo = userLeagueRepo;
         this.userLeagueStatusRepo = userLeagueStatusRepo;
         this.leagueMessageRepo = leagueMessageRepo;
         this.userMatchRepo = userMatchRepo;
@@ -63,6 +64,7 @@ public class UserLeagueService {
         this.leagueRoundRepo = leagueRoundRepo;
         this.playerTeamStatusRepo = playerTeamStatusRepo;
         this.playerService = playerService;
+        this.fantasyTeamRepo = fantasyTeamRepo;
     }
 
     public List<UserLeague> findAll(){
@@ -138,13 +140,24 @@ public class UserLeagueService {
         return userLeagueStatusRepo.save(userLeagueStatus);
     }
 
+
     public UserLeagueStatusDTO userLeagueStatusToDto(UserLeagueStatus userLeagueStatus){
+
+
         UserLeagueStatusDTO userLeagueStatusDTO = new UserLeagueStatusDTO();
         userLeagueStatusDTO.setId(userLeagueStatus.getMyUser().getId());
-        userLeagueStatusDTO.setTeam(userLeagueStatus.getMyUser().getFantasyTeam().getName());
+
         userLeagueStatusDTO.setName(userLeagueStatus.getMyUser().getUsername());
-        userLeagueStatusDTO.setTotal(userLeagueStatus.getMyUser().getFantasyTeam().getFantasyPoints());
-        userLeagueStatusDTO.setTeamId(userLeagueStatus.getMyUser().getFantasyTeam().getId());
+
+        if(userLeagueStatus.getMyUser().getFantasyTeam() == null){
+            userLeagueStatusDTO.setTeam("N/A");
+            userLeagueStatusDTO.setTotal(0);
+            userLeagueStatusDTO.setTeamId(-1);
+        } else{
+            userLeagueStatusDTO.setTeam(userLeagueStatus.getMyUser().getFantasyTeam().getName());
+            userLeagueStatusDTO.setTotal(userLeagueStatus.getMyUser().getFantasyTeam().getFantasyPoints());
+            userLeagueStatusDTO.setTeamId(userLeagueStatus.getMyUser().getFantasyTeam().getId());
+        }
 
         if(userLeagueStatus.getLeague().getLeagueTypeEnum() == LeagueTypeEnum.HEAD_TO_HEAD){
             userLeagueStatusDTO.setWins(userLeagueStatus.getWins());
@@ -189,18 +202,28 @@ public class UserLeagueService {
         return userLeagueStatusDTOList;
     }
 
-    public List<FantasyLeagueDTO> findByCode(String code, int userId){
-        List<UserLeague> userLeagues = new ArrayList<>();
-        userLeagues.addAll(headToHeadUserLeagueRepo.findAllByCode(code));
-        userLeagues.addAll(rotoUserLeagueRepo.findAllByCode(code));
-
-        List<FantasyLeagueDTO> fantasyLeagueDTOList = new ArrayList<>();
-
-        for(UserLeague u : userLeagues){
-            fantasyLeagueDTOList.add(fantasyLeagueToDto(u, userId));
+    public int findByCode(String code) {
+        Optional<UserLeague> leagueOptional = userLeagueRepo.findByCode(code);
+        if(leagueOptional.isPresent()){
+            return leagueOptional.get().getId();
         }
-        return fantasyLeagueDTOList;
+        throw new ResourceNotFoundException("League not found with code: " + code);
     }
+
+//    public List<FantasyLeagueDTO> findByCode(String code, int userId){
+//        List<UserLeague> userLeagues = new ArrayList<>();
+//        userLeagues.addAll(headToHeadUserLeagueRepo.findAllByCode(code));
+//        userLeagues.addAll(rotoUserLeagueRepo.findAllByCode(code));
+//
+//        List<FantasyLeagueDTO> fantasyLeagueDTOList = new ArrayList<>();
+//
+//        for(UserLeague u : userLeagues){
+//            fantasyLeagueDTOList.add(fantasyLeagueToDto(u, userId));
+//        }
+//        return fantasyLeagueDTOList;
+//    }
+
+
 
     public List<LeagueMessageDTO> getAllMessagesByUserInLeague(int userId, int leagueId){
 

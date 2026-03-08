@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearTeam } from "./redux/reducer/teamReducer";
 import { setNotifs } from "./redux/reducer/notifsReducer";
 import Notifications from "./Notifications";
+import SecondaryHeader from "./SecondaryHeader";
 
 function Header(){
     const {setToken} = useAuth();
@@ -54,54 +55,89 @@ function Header(){
         navigate("/auth");
 
     };
+
+
     return (
         <>
-            <header>
-                <nav>
-                    <ul>
-                        <li className={styles.logo}><Link to={"/"}>TOPSQUAD <i className="fa-solid fa-basketball"></i></Link></li>
-                        <li><Link to={"/"}>HOME</Link></li>
-                        {/* <li>Community</li> */}
-                        <li><i className="fa-solid fa-user"></i> {user.username.toUpperCase()}</li>
-                        <li><i className="fa-solid fa-money-bill"></i> <span>{user.budget*1000000}</span></li>
-                        {/* <li onMouseEnter={(e) => {setNotificationDisplay({display: 'block'})}} onMouseLeave={(e) => {setNotificationDisplay({display: 'none'})}}>
-                            <div className={styles.inbox}>
-                                <i className="fa-solid fa-inbox"></i>
-                            </div>
-                            <div style={notificationDisplay} className={styles.notifications}>
-                                {
-                                notifs.map(notification =>
-                                    <div key={notification.id} className={styles.notification}>
-                                        <p>{notification.message}</p>
-                                        <p>{notification.time}</p>
-                                    </div>
-                                )
-                                }
-                            </div>
-                        </li> */}
+        <header>
+            <nav style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px'}}>
+                <ul style={{display: 'flex', justifyContent: 'flex-start'}}>
+                    <li className={styles.logo}><Link to={"/"}>HOME <i className="fa-solid fa-basketball"></i></Link></li>
+                    <li>{user.username.toUpperCase()} <i class="fa-regular fa-user"></i></li>
+                    <li> <span>{user.budget*1000000}</span> <i class="fa-solid fa-coins"></i></li>
+                </ul>
+                <ul>
+                    <li>
+                        <button style={{background: 'none', borderRadius: 8, padding: '5px 10px', boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`, cursor: 'pointer'}} onClick={() => toggleNotifications()}>
+                            <i className="fa-solid fa-inbox"></i>
+                        </button>
 
-                        <li>
-                            <button className={styles.inboxButton} onClick={() => toggleNotifications()}>
-                                <i className="fa-solid fa-inbox"></i>
-                            </button>
-
-                            {
-                            notisVisible && 
-                            <>
-                            <button onClick={() => toggleNotifications()}>&times;</button>
-                            <Notifications/>
-                            </>
-                            }
-                        </li>
-                        <li>
-                            <button className={styles.logOut} onClick={() => handleLogout()}>LOGOUT <i className="fa-solid fa-arrow-right-from-bracket"></i></button>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            <Outlet/>
+                        {
+                        notisVisible && 
+                        <>
+                        <button onClick={() => toggleNotifications()}>&times;</button>
+                        <Notifications/>
+                        </>
+                        }
+                    </li>
+                    <li>
+                        <button style={{background: 'none', borderRadius: 8, padding: '5px 10px', boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`, cursor: 'pointer'}} onClick={() => handleLogout()}>LOGOUT <i className="fa-solid fa-arrow-right-from-bracket"></i></button>
+                    </li>   
+                </ul>
+            </nav>
+        </header>
+        <SecondaryHeader/>
+        <Outlet/>
         </>
     );
+    // return (
+    //     <>
+    //         <header>
+    //             <nav>
+    //                 <ul>
+    //                     <li className={styles.logo}><Link to={"/"}>TOPSQUAD <i className="fa-solid fa-basketball"></i></Link></li>
+    //                     <li><Link to={"/"}>HOME</Link></li>
+    //                     {/* <li>Community</li> */}
+    //                     <li><i className="fa-solid fa-user"></i> {user.username.toUpperCase()}</li>
+    //                     <li><i className="fa-solid fa-money-bill"></i> <span>{user.budget*1000000}</span></li>
+    //                     {/* <li onMouseEnter={(e) => {setNotificationDisplay({display: 'block'})}} onMouseLeave={(e) => {setNotificationDisplay({display: 'none'})}}>
+    //                         <div className={styles.inbox}>
+    //                             <i className="fa-solid fa-inbox"></i>
+    //                         </div>
+    //                         <div style={notificationDisplay} className={styles.notifications}>
+    //                             {
+    //                             notifs.map(notification =>
+    //                                 <div key={notification.id} className={styles.notification}>
+    //                                     <p>{notification.message}</p>
+    //                                     <p>{notification.time}</p>
+    //                                 </div>
+    //                             )
+    //                             }
+    //                         </div>
+    //                     </li> */}
+
+                        // <li>
+                        //     <button className={styles.inboxButton} onClick={() => toggleNotifications()}>
+                        //         <i className="fa-solid fa-inbox"></i>
+                        //     </button>
+
+                        //     {
+                        //     notisVisible && 
+                        //     <>
+                        //     <button onClick={() => toggleNotifications()}>&times;</button>
+                        //     <Notifications/>
+                        //     </>
+                        //     }
+                        // </li>
+                        // <li>
+                        //     <button className={styles.logOut} onClick={() => handleLogout()}>LOGOUT <i className="fa-solid fa-arrow-right-from-bracket"></i></button>
+                        // </li>
+    //                 </ul>
+    //             </nav>
+    //         </header>
+    //         <Outlet/>
+    //     </>
+    // );
 }
 
 export default Header

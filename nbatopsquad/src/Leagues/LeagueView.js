@@ -8,6 +8,7 @@ import { Client } from "@stomp/stompjs";
 import { useAuth } from "../Context/AuthContext";
 import { toast } from "react-toastify";
 import { useNavigateBack } from "../Router/NavigateBack";
+import CustomButton from "../components/CustomButton";
 
 function LeagueView(){
     //Use effect to fetch the league by ID
@@ -210,130 +211,101 @@ function LeagueView(){
 
 
     return (
-        <>
-            <button className="goBackButton" onClick={navigateBack}>Go back</button>
-            <div className={styles.leagueView}>
-                <div className={styles.leaderboard}>
-                    <h1>League Leaderboard</h1>
-                    <div className={styles.leagueTable}>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>League Position</th>
-                                    <th>Team</th>
-                                    <th>Points this round</th>
-                                    <th>Total points</th>
-                                    <th></th>
-                                </tr>
+        <div style={{padding: '5px 25px'}}>
+            <CustomButton onClick={navigateBack} label="Go back"/>
+            <div style={{backgroundColor: 'var(--secondaryBackground)', borderRadius: 12, marginTop: 16, padding: '24px'}}>
+                <div style={{display: 'flex', justifyContent: 'flex-end', marginTop: 12}}>
+                    <CustomButton label='Leave this league'/>
+                </div>
+                <div>
+                    <h1>{leagueInfo.name}</h1>
+                    <h3>{leagueInfo.type === 'H2H' ? 'Head To Head League' : 'Rotisserie League'}</h3>
+                    <h4 style={{fontStyle: 'italic'}}>{leagueInfo.matchmaking} Matchmaking</h4>
 
-                                {/* Sticky table header and scrollable body?*/}
-                            </thead>
-                            <tbody>
-                                {
-                                leagueUsers.map(leagueUser => 
-                                <tr key={leagueUser.id}>
-                                    <td>{leagueUser.pos}</td>
-                                    <td className={styles.userInfo}>
-                                        <p>{leagueUser.team}</p>
-                                        <p>{leagueUser.name}</p>
-                                    </td>
-                                    <td>{leagueUser.round}</td>
-                                    <td>{leagueUser.total}</td>
-                                    <td>
-                                        <button onClick={() => navigate(`/team/view/${leagueUser.teamId}`)}>View {leagueUser.name}'s team</button>
-                                    </td>
-                                </tr>
-                                )
-                                }
-                            </tbody>
-                        </table>
+                    <div style={{}}>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>User</th>
+                                        <th>Points this round</th>
+                                        <th>Total points</th>
+                                        <th></th>
+                                    </tr>
+
+                                    {/* Sticky table header and scrollable body?*/}
+                                </thead>
+                                <tbody>
+                                    {
+                                    leagueUsers.map(leagueUser => 
+                                    <tr key={leagueUser.id} style={{width: '100%'}}>
+                                        <td>{leagueUser.pos}</td>
+                                        <td>
+                                            {/* <p>{leagueUser.team}</p> */}
+                                            <p>{leagueUser.name}</p>
+                                        </td>
+                                        <td>{leagueUser.round}</td>
+                                        <td>{leagueUser.total}</td>
+                                        <td style={{width: '20%'}}>
+                                            <CustomButton onClick={() => navigate(`/team/view/${leagueUser.teamId}`)} label={`View ${leagueUser.name}'s team`} size="sm"/>
+                                        </td>
+                                    </tr>
+                                    )
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        {/* <div style={{width: '40%'}}>
+                            <h3>League Chat</h3>
+                            <div className={styles.chat}>
+                                <div className={styles.messages}>
+                                    {
+                                    messages.map((message, index)=>
+                                    <div key={message.id} className={`${styles.message} ${message.user ? styles.userMessages : styles.nonUserMessage}`}>
+                                        <p className={styles.messageText}>{message.message}</p>
+                                        <p className={styles.sender}>{message.name}</p>
+
+                                        {
+                                        !message.user &&
+                                        <button onClick={() => toggleReportConfirmation(index)}><i className="fa-solid fa-flag"></i></button>
+                                        }
+
+                                        {
+                                        (reportConfirmation && index === reportedMessageIndex) &&
+                                        <>
+                                        <div>
+                                            <form>
+                                                <label htmlFor="reportDescription">Report for: </label>
+                                                <select id="reportDescription" name="report" onChange={(e) => setReportDescription(e.target.value)}>
+                                                    <option value="">Description</option>
+                                                    <option value="Bad Language">Bad Language</option>
+                                                    <option value="Cheating">Cheating</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </form>
+                                            <p>Are you sure you want to report this message?</p>
+                                            <div>
+                                                <button onClick={() => reportMessage(message.id)}>Report</button>
+                                                <button onClick={() => toggleReportConfirmation(-1)}>Cancel</button>
+                                            </div>
+                                        </div>
+                                        </>
+                                        }
+                                        
+                                    </div>
+                                    )
+                                    }
+                                </div>
+                                <div style={{display: 'flex', width: '100%'}}>
+                                    <input style={{width: '100%'}} value={currentChat} onChange={(e) => setCurrentChat(e.target.value)}></input>
+                                    <button style={{border: 'none', background: 'none', cursor: 'pointer', opacity: 0.7}}onClick={(e) => sendMessage(e)}>Send <i class="fa-regular fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div> */}
                     </div>
                 </div>
-                <div className={styles.leagueContent}>
-                    <div className={styles.leagueInfoContainer}>
-                        <h1>League details</h1>
-                        <div className={styles.leagueInfo}>
-                            <div className={styles.info}>
-                                <p>League Name</p>
-                                <h6>{leagueInfo.name}</h6>
-                            </div>
-
-                            <div className={styles.info}>
-                                <p>League Type</p>
-                                <h6>{leagueInfo.type}</h6>
-                            </div>
-
-                            <div className={styles.info}>
-                                <p>Matchmaking</p>
-                                <h6>{leagueInfo.matchmaking}</h6>
-                            </div>
-                        
-                            {
-                            leagueInfo.timeUntilNextRound && 
-                            <>
-                            <div className={styles.info}>
-                                <p>Time Until Next Round</p>
-                                <h6>{leagueInfo.timeUntilNextRound}</h6>
-                            </div>
-                            </>
-                            }
-                            <div className={styles.info}>
-                                <p>Number of users in league</p>
-                                <h6>{leagueUsers.length}</h6>
-                            </div>
-                        </div>
-
-                        <button>Leave this league</button>
-                    </div>
-
-                    <div className={styles.leagueContentSection}>
-                        <h3>League Chat</h3>
-                        <div className={styles.chat}>
-                            <div className={styles.messages}>
-                                {
-                                messages.map((message, index)=>
-                                <div key={message.id} className={`${styles.message} ${message.user ? styles.userMessages : styles.nonUserMessage}`}>
-                                    <p className={styles.messageText}>{message.message}</p>
-                                    <p className={styles.sender}>{message.name}</p>
-
-                                    {
-                                    !message.user &&
-                                    <button onClick={() => toggleReportConfirmation(index)}><i className="fa-solid fa-flag"></i></button>
-                                    }
-
-                                    {
-                                    (reportConfirmation && index === reportedMessageIndex) &&
-                                    <>
-                                    <div>
-                                        <form>
-                                            <label htmlFor="reportDescription">Report for: </label>
-                                            <select id="reportDescription" name="report" onChange={(e) => setReportDescription(e.target.value)}>
-                                                <option value="">Description</option>
-                                                <option value="Bad Language">Bad Language</option>
-                                                <option value="Cheating">Cheating</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                        </form>
-                                        <p>Are you sure you want to report this message?</p>
-                                        <div>
-                                            <button onClick={() => reportMessage(message.id)}>Report</button>
-                                            <button onClick={() => toggleReportConfirmation(-1)}>Cancel</button>
-                                        </div>
-                                    </div>
-                                    </>
-                                    }
-                                    
-                                </div>
-                                )
-                                }
-                            </div>
-                            <div className={styles.send}>
-                                <textarea className="textBox" value={currentChat} onChange={(e) => setCurrentChat(e.target.value)}></textarea>
-                                <button onClick={(e) => sendMessage(e)}>Send</button>
-                            </div>
-                        </div>
-                    </div>
-                    
+                {/* <div style={{width: '40%'}}>  
                     <div className={`${styles.leagueContentSection} ${styles.topPerformersContainer}`}>
                         <h3>Top players in this league</h3>
                         <div className={styles.topPerformers}>
@@ -350,9 +322,9 @@ function LeagueView(){
                         }
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
-        </>
+        </div>
     );
 }
 

@@ -27,8 +27,10 @@ public class MyUser {
     @OneToMany(mappedBy = "createdBy", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<UserLeague> userLeagues;
 
+    @Column(unique = true)
     private String email;
 
+    @Column(unique = true)
     private String username;
 
     private int budget = 100;
@@ -46,7 +48,6 @@ public class MyUser {
     public int getId() {
         return id;
     }
-
 
 
     public FantasyTeam getFantasyTeam() {

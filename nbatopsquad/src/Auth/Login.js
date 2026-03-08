@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { NotificationContext } from "../Context/NotificationContext";
 import { toast } from "react-toastify";
+import CustomButton from "../components/CustomButton";
 
 function Login({setLogin}){
     const {setToken, isAdmin, setUserId} = useAuth();
@@ -47,43 +48,59 @@ function Login({setLogin}){
 
 
     return (
-        <>
-            <div className="container">
-                <div className="form-container">
-                    <div className="header">
-                        <div className="text">Log In</div>
-                        <div className="underline"></div>
-                    </div>
-                    <form>
-                        <div className="inputs">
-
-                            <div className="input">
-                                <i className="fa-regular fa-envelope"></i>
-                                <input type="email" placeholder="Email" name="email" onChange={handleChange}></input>
-                            </div>
-
-                            <div className="input">
-                                <i className="fa-solid fa-lock"></i>
-                                <input type="password" placeholder="Password" name="password" onChange={handleChange}></input>
-                            </div>
-
-                            <div className="submit-container">
-                                <div className="submit">
-                                    <button onClick={(e) => handleLogin(e)} type="submit" className="auth-button">Log In</button>
-                                </div>
-                                <div className="form-prompt">
-                                    <span>OR</span>
-                                    <span>NOT A MEMBER YET?</span>
-                                </div>
-                                <div className="submit">
-                                    <button onClick={() => setLogin(false)} className="auth-button">Sign Up</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+        <div style={{width: '100%'}}>
+            <div className="form-container">
+                <div>
+                    <h2 style={{textAlign: 'center'}}>Log In</h2>
                 </div>
+                <form>
+                    <div className="inputs">
+                        <div style={{ position: 'relative', marginTop: 8}}>
+                            <i
+                                className="fa-regular fa-user"
+                                // style={{
+                                //     position: 'absolute',
+                                //     left: '10px',
+                                //     top: '50%',
+                                //     transform: 'translateY(-50%)'
+                                // }}
+                            />
+                            <input
+                                type='text'
+                                placeholder="Email or Username"
+                                name="email"
+                                onChange={handleChange}
+                                style={{}}
+                            />
+                        </div>
+
+                        <div style={{ position: 'relative', marginTop: 8}}>
+                            <i className="fa-solid fa-lock" style={{
+                                opacity: 0.7, 
+                                // position: 'absolute', 
+                                // left: '10px', 
+                                // top: '50%', transform: 
+                                // 'translateY(-50%)'
+                            }}
+                            ></i>
+                            <input style={{}} type="password" placeholder="Password" name="password" onChange={handleChange}></input>
+                        </div>
+                    </div>
+                    <div style={{marginTop: 12}}>
+                        <div style={{width: '100%', marginTop: 8}}>
+                            <CustomButton onClick={(e) => handleLogin(e)} label='Log In'/>
+                        </div>
+                        <div style={{textAlign: 'center', marginTop: 8}}>
+                            <span>OR</span>
+                            <span>NOT A MEMBER YET?</span>
+                        </div>
+                        <div style={{width: '100%', marginTop: 8}}>
+                            <CustomButton onClick={() => setLogin(false)} label='Sign Up'/>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </>
+        </div>
     );
 };
 

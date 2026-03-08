@@ -3,6 +3,7 @@ import { TeamSelectionContext } from "../Context/TeamSelection";
 import styles from "../Styles/ShowPlayers.module.css";
 import Pagination from "../Pagination/Pagination";
 import axios from "axios";
+import CustomButton from "../components/CustomButton";
 
 function ShowPlayers({pos, selectedLeague}){
 
@@ -43,16 +44,29 @@ function ShowPlayers({pos, selectedLeague}){
     return (
         <>
             <p>Select Your Player</p>
-            <div className={styles.players}>
-                {players.map(player => 
-                <div key={player.id} className={styles.player}>
-                    <img src={player.image} alt={player.name}></img>
-                    <p>{player.name}</p>
-                    <p>{player.pos}</p>
-                    <p>{player.value*1000000}</p>
-                    <button onClick={() => addPlayer(player)}>Select Player</button>
-                </div>
-                )}
+            <div style={{backgroundColor: '#232323', padding: '4px 10px', borderRadius: 12, display: 'flex', justifyContent: 'center'}}>
+                <table style={{width: '100%'}}>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Value</th>
+                            <th>Add</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {players.length > 0 ? players.map((player) => (
+                            <tr key={player.id}>
+                                <td><img src={player.image} alt={player.name} style={{borderRadius: 50, width: 45, height: 50}}></img></td>
+                                <td>{player.name}</td>
+                                <td>{player.pos}</td>
+                                <td>{player.value} <i class="fa-solid fa-star" style={{color: "var(--header)"}}></i></td>
+                                <td><CustomButton onClick={() => addPlayer(player)} label='Add Player' size="sm"/></td>
+                            </tr>
+                        )) : <tr><td colSpan="5">No players found</td></tr>}
+                    </tbody>
+                </table>
             </div>
             
             <Pagination 

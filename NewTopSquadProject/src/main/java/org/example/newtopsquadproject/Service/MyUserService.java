@@ -50,9 +50,14 @@ public class MyUserService {
     public MyUser registerUser(RegistrationRequestDto registrationRequestDto){
 
         String email = registrationRequestDto.getEmail();
+        String username = registrationRequestDto.getUsername();
 
         if(myUserRepo.findByEmail(email).isPresent()){
             throw new ValidationException("Email: " + email + "already exists");
+        }
+
+        if(myUserRepo.findByUsername(username).isPresent()){
+            throw new ValidationException("Username: " + username + "is already taken");
         }
 
         MyUser myUser = new MyUser();
@@ -88,6 +93,10 @@ public class MyUserService {
         return myUserRepo.findByEmail(email);
     }
 
+    public Optional<MyUser> findByEmailOrUsername(String cred){
+        return myUserRepo.findByEmailOrUsername(cred);
+    }
+
     public List<MyUser> findAll(){
         return myUserRepo.findAll();
     }
@@ -120,6 +129,18 @@ public class MyUserService {
     public UserDTO userToDto(MyUser myUser){
         UserDTO userDTO = new UserDTO();
         userDTO.setUsername(myUser.getUsername());
+        int globalRank = 0;
+
+        if(myUser.getFantasyTeam() != null){
+            globalRank = fantasyTeamRepo.getRank(myUser.getFantasyTeam().getFantasyPoints());
+            userDTO.setGlobalRank(globalRank);
+            userDTO.setTeamValue(myUser.getFantasyTeam().calcTeamValue());
+        } else{
+            globalRank = fantasyTeamRepo.getRank(0);
+            userDTO.setGlobalRank(globalRank);
+            userDTO.setTeamValue(0);
+        }
+
         userDTO.setBudget(myUser.getBudget());
 
         return userDTO;

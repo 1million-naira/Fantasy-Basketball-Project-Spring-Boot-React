@@ -4,18 +4,7 @@ import org.example.newtopsquadproject.Model.Login.LoginRequest;
 import org.example.newtopsquadproject.Model.Login.LoginResponse;
 import org.example.newtopsquadproject.Model.Login.RegistrationRequestDto;
 import org.example.newtopsquadproject.Model.Login.RegistrationResponse;
-import org.example.newtopsquadproject.Model.Players.MyUser;
-import org.example.newtopsquadproject.Security.JwtIssuer;
-import org.example.newtopsquadproject.Security.UserPrincipal;
 import org.example.newtopsquadproject.Service.AuthService;
-import org.example.newtopsquadproject.Service.MyUserService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 

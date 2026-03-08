@@ -5,6 +5,7 @@ import styles from "../Styles/Teams.module.css";
 import PlayerCard from "../Players/PlayerCard";
 import axios from "axios";
 import { useNavigateBack } from "../Router/NavigateBack";
+import CustomButton from "../components/CustomButton";
 
 function Teams(){
     const {teamId} = useParams(); //Use effect to fetch the team of this id.
@@ -33,8 +34,8 @@ function Teams(){
     const navigateBack = useNavigateBack("/");
 
     return (
-        <>
-            <button className="goBackButton" onClick={navigateBack}>Go back</button>
+        <div style={{padding: '10px 25px'}}>
+            <CustomButton className="goBackButton" onClick={navigateBack} label='Go back'/>
             <div className={styles.teamContainer}>
                 <h1>{teamName}</h1>
                 <div className={styles.points}>
@@ -60,7 +61,7 @@ function Teams(){
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 
 }

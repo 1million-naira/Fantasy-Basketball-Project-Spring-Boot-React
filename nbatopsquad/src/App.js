@@ -1,5 +1,4 @@
 import './App.css';
-import Header from './Header';
 import Home from './Home';
 import TeamCreation from './Teams/TeamCreation';
 import Transfer from './Teams/Transfer';
@@ -13,6 +12,10 @@ import EditTeam from './Teams/EditTeam';
 import Teams from './Teams/Teams';
 import AdminHome from './Admin/AdminHome';
 import { useAuth } from './Context/AuthContext';
+import Leagues from './Leagues/Leagues';
+import JoinLeague from './Leagues/JoinLeague';
+import JoinPrivate from './Leagues/JoinPrivate';
+import CreateLeague from './Leagues/CreateLeague';
 
 
 
@@ -21,26 +24,17 @@ function App() {
   const {admin} = useAuth();
 
   return (
-    <>
-      {/* <Header/>
-      <Home/> */}
-      {/* <Auth/> */}
-      {/* <LeagueView/> */}
-      {/* <Transfer/> */}
-
-      {/* <TeamProvider>
-        <TeamCreation/>
-      </TeamProvider> */}
-      
-      {/* <AdminHome/> */}
-      
-
+    <>   
       <Routes>
         <Route path="/auth" element={<Auth/>}/>
       
         <Route path="/" element={<ProtectedRoute><Main/></ProtectedRoute>}>
         <Route index element={<ProtectedRoute><Home/></ProtectedRoute>}/>
-        <Route path="/league/:leagueId" element={<ProtectedRoute><LeagueView/></ProtectedRoute>}/>
+        <Route path="/leagues" element={<ProtectedRoute><Leagues/></ProtectedRoute>}/>
+        <Route path="/leagues/join" element={<ProtectedRoute><JoinLeague/></ProtectedRoute>}/>
+        <Route path="/leagues/join/private" element={<ProtectedRoute><JoinPrivate/></ProtectedRoute>}/>
+        <Route path="/leagues/create" element={<ProtectedRoute><CreateLeague/></ProtectedRoute>}/>
+        <Route path="/leagues/:leagueId" element={<ProtectedRoute><LeagueView/></ProtectedRoute>}/>
         <Route path="/transfers" element={<ProtectedRoute><Transfer/></ProtectedRoute>}/>
         <Route path="/team/view/:teamId" element={<ProtectedRoute><Teams/></ProtectedRoute>}/>
         <Route path="/team/edit" element={<ProtectedRoute><EditTeam/></ProtectedRoute>}/>

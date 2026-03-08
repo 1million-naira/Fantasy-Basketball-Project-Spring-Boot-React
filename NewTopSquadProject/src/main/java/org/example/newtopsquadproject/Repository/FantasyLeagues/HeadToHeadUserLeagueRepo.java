@@ -10,7 +10,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,8 +17,7 @@ import java.util.Optional;
 @Repository
 public interface HeadToHeadUserLeagueRepo extends UserLeagueRepo {
     Optional<HeadToHeadUserLeague> findById(int id);
-
-    List<HeadToHeadUserLeague> findAllByCode(String code);
+//    Optional<HeadToHeadUserLeague> findByCode(String code);
 
     @Query("SELECT league FROM HeadToHeadUserLeague league WHERE league.headToHeadLeagueType = :type")
     List<HeadToHeadUserLeague> findAllByHeadToHeadLeagueType(@Param("type") HeadToHeadLeagueType headToHeadLeagueType);

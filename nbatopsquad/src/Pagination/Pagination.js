@@ -16,10 +16,19 @@ function Pagination({total, currentPage, contentPerPage, paginate}){
     return (
         <>
             <nav>
-                <ul className={styles.pagination}>
+                <ul style={{listStyle: "none",
+                    width: "100%",
+                    marginTop: "12px",
+                    padding: 0,
+                    // border: "1px solid white",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px",
+                    justifyContent: "center"
+                }}>
                     {
                     pageNumbers.map(number =>
-                    <li key={number}>
+                    <li key={number} style={{backgroundColor: 'var(--monoHeader)', width: '20px', borderRadius: '5px', padding: '3px'}}>
                         <a 
                         onClick={(e) => updatePage(e, number)}
                         href="#"

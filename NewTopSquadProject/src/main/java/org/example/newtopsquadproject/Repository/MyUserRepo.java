@@ -22,6 +22,9 @@ public interface MyUserRepo extends CrudRepository<MyUser, Integer>,
 
     Optional<MyUser> findByUsername(String username);
 
+    @Query("SELECT u FROM MyUser u WHERE u.email = :cred OR u.username = :cred")
+    Optional<MyUser> findByEmailOrUsername(@Param("cred") String cred);
+
     @NonNull
     Page<MyUser> findAll(@NonNull Pageable pageable);
 

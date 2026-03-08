@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import TeamView from "./Teams/TeamView";
 import styles from "./Home.module.css";
 import { TeamContext } from "./Context/TeamUpdate";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import SockJS from "sockjs-client";
 import { Client, Stomp } from "@stomp/stompjs";
@@ -13,9 +13,7 @@ import { addNotif } from "./redux/reducer/notifsReducer";
 import { clearTeam, updateTeam } from "./redux/reducer/teamReducer";
 import { useWebSocketService } from "./WebSocket";
 import { toast } from "react-toastify";
-import PlayerFilter from "./Players/PlayerFilter";
-import ShowTransferPlayers from "./Players/ShowTransferPlayers";
-import ViewPlayers from "./Players/ViewPlayers";
+import CustomButton from "./components/CustomButton";
 
 
 
@@ -100,7 +98,7 @@ function Home(){
     
     
 
-    const [teamCreated, setTeamCreated] = useState(true)
+    const [teamCreated, setTeamCreated] = useState(false)
     const {team, setTeam} = useContext(TeamContext)
 
     const [create, isCreate] = useState(false)
@@ -162,11 +160,6 @@ function Home(){
     const [completed, setCompleted] = useState(false);
     const [displayedMatches, setDisplayedMatches] = useState(matches.filter(match => match.ongoing));
 
-
-    const [currentPos, setCurrentPos] = useState('');
-    const [currentLeague, setCurrentLeague] = useState('');
-    const[search, setSearch] = useState('');
-
     const [currentlySelectedLeague, setCurrentlySelectedLeague] = useState("cba");
 
     const [topPerformingPlayers, setTopPerformingplayers] = useState([]);
@@ -189,8 +182,17 @@ function Home(){
         setDisplayedMatches(matches.filter(match => match.completed));
     }
 
+    const [user, setUser] = useState({budget: 0, points: 0, teamValue: 0, globalRank: 0, username: 'User'});
 
     useEffect(() => {
+        axios.get("http://localhost:8080/api/users/user")
+        .then((response) => {
+            console.log(response.data);
+            setUser(response.data);
+        }).catch((error) => {
+            console.log(error);
+        }); 
+
         axios.get("http://localhost:8080/api/fantasy/team")
         .then((response => {
             setTeamCreated(true);
@@ -220,28 +222,8 @@ function Home(){
         .catch((error) => {
             console.log(error);
         });
-
-        axios.get("http://localhost:8080/api/players", {params:{sortBy: "fantasyPoints", league: currentlySelectedLeague, direction:"desc"}})
-        .then((response) => {
-            setTopPerformingplayers(response.data.content);
-        })
-        .catch((error) => {
-            console.log(error);
-            setTopPerformingplayers([]);
-        });
     }, []);
 
-
-    useEffect(() => {
-        axios.get("http://localhost:8080/api/players", {params:{sortBy: "fantasyPoints", league: currentlySelectedLeague, direction:"desc"}})
-        .then((response) => {
-            setTopPerformingplayers(response.data.content);
-        })
-        .catch((error) => {
-            console.log(error);
-            setTopPerformingplayers([]);
-        });
-    }, [currentlySelectedLeague]);
 
 
     const showCreateForm = () => {
@@ -392,370 +374,96 @@ function Home(){
         })
     }
 
+
+
     const navigate = useNavigate();
 
 
 
-
-
     return (
-        <>
-            <div className={styles.home}>
-                <div className={styles.teamView}>
+        <div style={{padding: '5px 25px'}}>
+            <h1>Welcome to TopSquad</h1>
+            <div style={{display: 'flex', flexDirection: 'row-reverse', padding: '0 10px', justifyContent: 'space-between', gap: 12}}>
+                <div style={{width: '55%', backgroundColor: '#232323', borderRadius: 12, padding: '8px 16px'}}>
                     {teamCreated ?
                     <> 
-                    <div className={styles.team}>
+                    <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <h2>Team Name</h2>
+                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12}}>
+                            <CustomButton onClick={() => navigate("/team/edit")} label='Edit Team'/>
+                            <CustomButton onClick={() => navigate("/transfers")} label='Make Transfers'/>
+                        </div>
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
+                        {/* <div style={{textAlign: 'center'}}>
+                            <h2 s>143</h2>
+                            <p>Highest</p>
+                        </div> */}
+                        <div style={{textAlign: 'center'}}>
+                            <h1>{user.points}</h1>
+                            <p>Points</p>
+                        </div>
+                        <div style={{textAlign: 'center'}}>
+                            <h1>{user.globalRank}</h1>
+                            <p>Rank</p>
+                        </div>
+                    </div>
+                    <div style={{marginTop: '10px'}}>
                         <TeamView team={team}/>
                     </div>
-                    <div className={styles.teamOptions}>
-                        <button onClick={() => navigate("/team/edit")}>Edit Team</button>
-                        <button onClick={() => navigate("/transfers")}>Make Transfers</button>
-                    </div>
                     </>
-                    : <button onClick={() => navigate("/team/create")}>Create Your Team</button>
-                    //Send a request to API to see if user has a team, teamCreated is then set to true
+                    :
+                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
+                        <CustomButton onClick={() => navigate("/team/create")} label="Create Your Team" size="lg"/>
+                    </div>
                     }
                 </div>
-                <div className={styles.menu}>
-                    <h1>Menu</h1>
-
-                    <div className={styles.menuButtons}>
-                        <button onClick={() => toggleLeagues()}>Leagues</button>
-                        <button onClick={() => toggleMatches()}>Your Matches</button>
-                        <button onClick={() => togglePlayers()}>Players</button>
+                <div style={{display: 'flex', flexDirection: 'column', padding: '8px 16px', alignItems: 'flex-start', justifyContent: 'flex-start', width: '40%', backgroundColor: '#232323', borderRadius: 12}}>
+                    <div style={{borderBottom: `1px solid rgba(255, 255, 255, 0.2)`, width: '100%'}}>
+                        <h1>Team Name</h1>
+                    </div>
+                    <div style={{borderBottom: `1px solid rgba(255, 255, 255, 0.2)`, width: '100%'}}>
+                        <h2 style={{}}>Points & Rankings</h2>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <p>Total points</p>
+                            <p>{user.points}</p>
+                        </div>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <p>Number of global users</p>
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div style={{borderBottom: `1px solid rgba(255, 255, 255, 0.2)`, width: '100%', padding: '10px 0'}}>
+                        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                            <h2>My Leagues</h2>
+                            <Link to={"/leagues"}><CustomButton label="Create/Join Leagues" icon={<i style={{fontSize: '0.7em'}} class="fa-solid fa-chevron-right"></i>}/></Link>
+                        </div>
+                        <div>
+                            <h3>Head To Head</h3>
+                        </div>
+                        <div>
+                            <h3>Rotisserie</h3>
+                        </div>
+                        <div>
+                            <h3>Your Created Leagues</h3>
+                        </div>
                     </div>
 
-
-                    {
-                    menuState === "Leagues" &&
-                    <>
-                        <div className={styles.leaguesMenu}>
-                            <div className={styles.leagueButtons}>
-                                <button onClick={() => showCreateForm()}>Create League</button>
-                                <button onClick={() => showJoinForm()}>Join League</button>
-                                <button onClick={() => displayPublicLeagues()}>View Public Leagues</button>
-                            </div>
-                            {
-                            (create || join) &&
-                            <div className={styles.leagueForms}>
-                                { create &&
-                                (
-                                <>
-                                <div className={styles.leagueForm}>
-                                    <p>Create a League</p>
-                                    <form>
-                                        <div>
-                                            <label htmlFor="leagueName">League Name</label>
-                                            <input required type="text" id="leagueName" placeholder="League Name" name="name" onChange={(e) => handleCreateFormChange(e)}/>
-                                        </div>
-                                        <div>
-                                            <label htmlFor="leagueType">League Type</label>
-                                            <select id="leagueType" name="type" onChange={(e) => {e.target.value === "H2H" ? setH2HSelected(true) : setH2HSelected(false); handleCreateFormChange(e)}}>
-                                                <option>Type</option>
-                                                <option value="H2H">Head To Head</option>
-                                                <option value="Roto">Rotisserie</option>
-                                            </select>
-                                        </div>
-                                        {
-                                        H2HSelected &&
-                                        <div>
-                                            <label htmlFor="matchmaking">Matchmaking</label>
-                                            <select id="matchmaking" name="matchmaking" onChange={(e) => handleCreateFormChange(e)}>
-                                                <option>Matchmaking</option>
-                                                <option value="RR">Round Robin</option>
-                                                <option value="Random">Random</option>
-                                            </select>
-                                        </div>
-                                        }
-                                        <div>
-                                            <label htmlFor="access">Access</label>
-                                            <select id="access" name="access" onChange={(e) => handleCreateFormChange(e)}>
-                                                <option>Access</option>
-                                                <option value="Public">Public</option>
-                                                <option value="Private">Private</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" onClick={(e) => submitCreateForm(e)}>Create</button>
-                                    </form>
-                                    <button onClick={() => {isCreate(false)}} className={styles.close}>&times;</button>   
-                                </div>  
-                                </>             
-                                )
-                                }
-
-                                {
-                                join &&
-                                (
-                                <>
-                                <div className={styles.leagueForm}>
-                                    <p>Join a League (Enter the league's code to join)</p>
-                                    <form>
-                                        <div>
-                                            <label htmlFor="leagueCode">League Code</label>
-                                            <input type="text" placeholder="League Code" onChange={(e) =>  handleJoinFormChange(e)}/>
-                                        </div>
-                                        <button type="submit" onClick={(e) => submitJoinForm(e)}>Find League</button>
-                                    </form>
-                                    <button onClick={() => {isJoin(false)}} className={styles.close}>&times;</button>
-                                </div>
-                                </>
-                                ) 
-                                }
-                            </div>
-                            }
-                            {
-                            found && 
-                            <>
-                            <div className={styles.foundLeagues}>
-                                {
-                                foundLeagues.length !== 0 ?
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>League Name</th>
-                                            <th>League Type</th>
-                                            <th>Matchmaking</th>
-                                            <th>Users</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                        foundLeagues.map(league => 
-                                        <tr key={league.id}>
-                                            <td>{league.name}</td>
-                                            <td>{league.type}</td>
-                                            <td>{league.matchmaking ? league.matchmaking : "None"}</td>
-                                            <td>{league.users}</td>
-                                            <td><button onClick={() => joinLeague(league.id, league.type, league.name, league)}>Join League</button></td>
-                                        </tr>
-                                        )
-                                        }
-                                    </tbody>
-                                </table> : 
-                                <p>No leagues found by this code</p>
-                                }
-                                <button onClick={() => showFoundLeagues(false)} className={styles.close}>&times;</button>
-                            </div>
-                            </>
-                            }
-
-
-                            <div className={styles.publicLeagues}>
-                                {
-                                isPublic && publicLeagues.length !== 0 ? 
-                                <>
-                                <p>Public Leagues</p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>League Name</th>
-                                            <th>League Type</th>
-                                            <th>Matchmaking</th>
-                                            <th>Users</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                        publicLeagues.map(league => 
-                                        <tr key={league.id}>
-                                            <td>{league.name}</td>
-                                            <td>{league.type}</td>
-                                            <td>{league.matchmaking ? league.matchmaking : "None"}</td>
-                                            <td>{league.users}</td>
-                                            <td><button>Join League</button></td>
-                                        </tr>
-                                        )
-                                        }
-                                    </tbody>
-                                </table>
-                                <button onClick={() => showPublicLeagues(false)} className={styles.close}>&times;</button>
-                                </> : 
-                                <></>
-                                }
-                            </div>
-
-                            <div className={`${styles.yourLeagues} ${styles.menuSection}`}>
-                                <h3>Your Leagues</h3>
-                                <div className={styles.menuButtons}>
-                                    <button onClick={() => showH2HLeagues()}>H2H</button>
-                                    <button onClick={() => showRotoLeagues()}>Roto</button>
-                                    <button onClick={() => showCreatedLeagues()}>Created</button>
-                                </div>
-
-                                <div>
-                                    {headToHead ? <h4>Head To Head Leagues</h4> : <></>}
-                                    {roto ? <h4>Rotisserie Leagues</h4> : <></>}
-                                    {created ? <h4>Created Leagues</h4> : <></>}
-                                    <table>
-                                        {
-                                        filteredLeagues.length !== 0 &&
-                                        <thead>
-                                            <tr>
-                                                <th>League Name</th>
-                                                <th>League Type</th>
-                                                {(headToHead || created) && <th>Matchmaking</th>}
-                                                <th>Users</th>
-                                                <th></th>
-
-                                                {created && <th></th>}
-                                                
-                                            </tr>
-                                        </thead>
-                                        }
-                                        
-                                        <tbody>
-                                            {
-                                            headToHead ?
-                                            (filteredLeagues.map((league) => 
-                                            <tr key={league.id}>
-                                                <td>{league.name}</td>
-                                                <td>{league.type}</td>
-                                                <td>{league.matchmaking}</td>
-                                                <td>{league.users}</td>
-                                                <td><button onClick={() => navigate(`/league/${league.id}`)}>View League</button></td>
-                                            </tr>
-                                            )) :
-
-                                            roto ? 
-                                            (filteredLeagues.map((league) => 
-                                                <tr key={league.id}>
-                                                    <td>{league.name}</td>
-                                                    <td>{league.type}</td>
-                                                    <td>{league.users}</td>
-                                                    <td><button onClick={() => navigate(`/league/${league.id}`)}>View League</button></td>
-                                                </tr>
-                                            )) :
-
-                                            created ?
-                                            (filteredLeagues.map(league => 
-                                                <tr key={league.id}>
-                                                <td>{league.name}</td>
-                                                <td>{league.type}</td>
-                                                <td>{league.matchmaking ? league.matchmaking : "None"}</td>
-                                                <td>{league.users}</td>
-                                                <td><button onClick={() => navigate(`/league/${league.id}`)}>View League</button></td>
-                                                <td><button>Manage League</button></td>
-                                            </tr>
-                                            )
-                                            ) :
-                                
-                                            <></>
-                                            }
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                    <div style={{borderBottom: `1px solid rgba(255, 255, 255, 0.2)`, width: '100%', padding: '10px 0'}}>
+                        <h2 style={{}}>Transfers/Finances</h2>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <p>Team value</p>
+                            <p>{user.teamValue} <i class="fa-solid fa-star" style={{color: "var(--header)"}}></i></p>
                         </div>
-                        </>
-                        }
-
-                        {
-                        menuState === "Matches" &&
-                        <>
-                        <div className={`${styles.userMatches} ${styles.menuSection}`}>
-                            <h3>Head To Head Matches</h3>
-                            <div className={styles.menuButtons}>
-                                <button onClick={() => showOnGoingMatches()}>Ongoing</button>
-                                <button onClick={() => showUpcomingMatches()}>Upcoming</button>
-                                <button onClick={() => showPastMatches()}>Past</button>
-                            </div>
-                            {
-                            onGoing ? 
-                            <p>Ongoing Matches</p> :
-                            !onGoing && !completed ?
-                            <p>Upcoming Matches</p> :
-                            completed ? 
-                            <p>Past Matches</p> :
-                            <></>
-                            }
-                            <div className={styles.matches}>
-                                <div className={`${styles.match} ${styles.matchHeader}`}>
-                                    <div className={styles.matchParticipant}>
-                                        <p>Home</p>
-                                    </div>
-                                    <div className={styles.matchParticipant}>
-                                    </div>
-                                    <div className={styles.matchParticipant}>
-                                        <p>Away</p>
-                                    </div>
-                                    <div className={styles.matchParticipant}>
-                                        <p>League</p>
-                                    </div>
-                                    <div className={styles.matchParticipant}>
-                                        <p>Result</p>
-                                    </div>
-                                </div>
-                                {
-                                displayedMatches.map(match => 
-                                <div className={styles.match} key={match.id}>
-                                    <div className={`${styles.matchParticipant} ${match.userHome ? styles.loggedInUser : null}`}>
-                                        <p>{match.home}</p>
-                                        <p>{match.homeScore}</p>
-                                    </div>
-                                    <div>
-                                        <p>VS</p>
-                                    </div>
-                                    <div className={`${styles.matchParticipant} ${!match.userHome ? styles.loggedInUser : null}`}>
-                                        <p>{match.away}</p>
-                                        <p>{match.awayScore}</p>
-                                    </div>
-                                    <div className={styles.matchLeague}>
-                                        <p>{match.league}</p>
-                                    </div>
-                                    <div className={styles.matchResult}>
-                                        {match.userHome && match.homeScore > match.awayScore ? <p className={styles.matchWin}>W</p> : match.userHome && match.homeScore < match.awayScore ? <p className={styles.matchLose}>L</p> 
-                                        : match.userHome && match.homeScore === match.awayScore ? <p className={styles.matchDraw}>D</p>  : null}
-
-                                        {!match.userHome && match.homeScore > match.awayScore ? <p className={styles.matchLose}>L</p>  : !match.userHome && match.homeScore < match.awayScore ? <p className={styles.matchWin}>W</p> 
-                                        : !match.userHome && match.homeScore === match.awayScore ? <p className={styles.matchDraw}>D</p>  : null}
-                                    </div>
-                                </div>
-                                )
-                                }
-                            </div>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <p>Budget</p>
+                            <p>{user.budget} <i class="fa-solid fa-star" style={{color: "var(--header)"}}></i></p>
                         </div>
-                        </>
-                        }
-
-                        {
-                        menuState === "Players" &&
-                        <>
-                        <div className={styles.players}>
-                            <h3>Players</h3>
-
-                            <PlayerFilter setCurrentPos={setCurrentPos} setCurrentLeague={setCurrentLeague} setSearch={setSearch}/>
-                            <ViewPlayers currentPos={currentPos} currentLeague={currentLeague} search={search}/>
-
-                            <h4>Top performing players</h4>
-                            <div className={styles.menuButtons}>
-                                <button onClick={() => setCurrentlySelectedLeague("cba")}>CBA</button>
-                                <button onClick={() => setCurrentlySelectedLeague("nba")}>NBA</button>
-                                <button onClick={() => setCurrentlySelectedLeague("wnba")}>WNBA</button>
-                                <button onClick={() => setCurrentlySelectedLeague("euro")}>Euro League</button>
-                            </div>
-                            <p className={styles.currentlySelectedLeague}>{currentlySelectedLeague.toUpperCase()}</p>
-                            <div className={styles.topPerformers}>
-                                {
-                                topPerformingPlayers.length > 0 ?
-                                topPerformingPlayers.map(player=> 
-                                <div key={player.id} className={styles.topPerformer}>
-                                    <img src={player.image} alt={player.name}></img>
-                                    <p>{player.name}</p>
-                                    <p>Fantasy Points: {player.points}</p>
-                                    <button>View {player.name}'s profile</button>
-                                </div>) :
-                                <p>No players</p>
-                                }
-                            </div>
-                        </div>
-                    </>
-                    }
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     );
-
 }
 
 export default Home

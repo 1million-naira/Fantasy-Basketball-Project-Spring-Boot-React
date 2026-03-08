@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { updateTeam } from "../redux/reducer/teamReducer";
 import { useNavigateBack } from "../Router/NavigateBack";
 import { toast } from "react-toastify";
+import CustomButton from "../components/CustomButton";
 
 
 function Transfer(){
@@ -57,32 +58,33 @@ function Transfer(){
     const navigateBack = useNavigateBack("/");
 
     return (
-        <>
-            <button className="goBackButton" onClick={navigateBack}>Go back</button>
-            <h3 className={styles.transferTip}>Tip: Select a player in your team then choose a player to transfer in!</h3>
+        <div style={{padding: '5px 25px'}}>
+            <CustomButton onClick={navigateBack} label="Go back"/>
+
+            <h2 style={{fontStyle: 'italic', fontWeight: 100, textAlign: 'center'}}>Tip: Select a player in your team then choose a player to transfer in!</h2>
 
             <div className={styles.transferButtons}>
-                <button onClick={() => {confirmTransfers()}}>Confirm Transfers</button>
-                <button onClick={() => setTransferSession(teamState)}>Undo All Transfers</button>
+                <CustomButton onClick={() => {confirmTransfers()}} label="Confirm Transfers"/>
+                <CustomButton onClick={() => setTransferSession(teamState)} label="Undo All Transfers"/>
             </div>
 
 
-            <div className={styles.budget}>
-                <p>Your budget:</p>
-                <span>{budget * 1000000} <i className="fa-solid fa-money-bill"></i></span>
+            <div style={{textAlign: 'center'}}>
+                <h2>Your budget:</h2>
+                <span>{budget * 1000000} <i className="fa-solid fa-coins"></i></span>
             </div>
 
-            <div className={styles.transfer}>
-                <div className={styles.team}>
+            <div style={{display: 'flex', justifyContent: 'space-between', gap: 12, padding: '0 10px', marginTop: 16}}>
+                <div style={{width: '60%'}}>
                     <TransferSession/>
                 </div>
-                <div className={styles.filter}>
+                <div style={{width: '35%'}}>
                     <PlayerFilter setCurrentPos={setCurrentPos} setCurrentLeague={setCurrentLeague} setSearch={setSearch}/>
                     <ShowTransferPlayers currentPos={currentPos} currentLeague={currentLeague} search={search}/>
                 </div>
             </div>
 
-        </>
+        </div>
     );
 }
 

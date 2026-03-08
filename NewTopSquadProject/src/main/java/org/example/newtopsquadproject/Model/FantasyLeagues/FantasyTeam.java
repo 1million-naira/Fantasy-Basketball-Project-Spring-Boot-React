@@ -28,6 +28,8 @@ public class FantasyTeam {
     private String name;
     private int fantasyPoints;
 
+    private int value;
+
     @OneToMany(mappedBy = "fantasyTeam", fetch = FetchType.LAZY)
     private List<PlayerTeamStatus> playerTeamStatuses;
 
@@ -71,5 +73,13 @@ public class FantasyTeam {
 
     public void addFantasyPoints(int fantasyPoints) {
         this.fantasyPoints += fantasyPoints;
+    }
+
+    public int calcTeamValue(){
+        int sum = 0;
+        for(PlayerTeamStatus p : this.playerTeamStatuses){
+            sum += p.getPlayer().getValue();
+        }
+        return sum;
     }
 }

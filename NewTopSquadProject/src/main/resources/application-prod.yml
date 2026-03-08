@@ -1,0 +1,19 @@
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+security:
+  jwt:
+    secret-key: ${JWT_KEY}
+spring:
+  application:
+    name: NewTopSquadProject
+  datasource:
+    password: ${DB_PASSWORD}
+    url: jdbc:${DB_URL}
+    username: ${DB_USER}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

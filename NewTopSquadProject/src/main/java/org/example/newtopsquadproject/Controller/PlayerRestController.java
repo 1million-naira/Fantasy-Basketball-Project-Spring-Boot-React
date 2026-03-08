@@ -39,7 +39,7 @@ public class PlayerRestController {
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Player> getPlayer(@PathVariable("id") int id){
+    public ResponseEntity<Player> getPlayer(@PathVariable int id){
         Player player = playerService.findById(id);
         return new ResponseEntity<>(player, HttpStatus.OK);
     }

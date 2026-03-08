@@ -19,7 +19,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        var user = myUserService.findByEmail(username).orElseThrow();
+        var user = myUserService.findByEmailOrUsername(username).orElseThrow();
 
         return UserPrincipal.builder()
                 .userId(user.getId())

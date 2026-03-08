@@ -18,6 +18,8 @@ export default function TeamUpdate({children}){
 
     
     const [budget, setBudget] = useState(100);
+    const [teamName, setTeamName] = useState("My Team");
+    const [points, setPoints] = useState(0);
 
     
 
@@ -146,6 +148,10 @@ export default function TeamUpdate({children}){
                 setTeam,
                 budget,
                 setBudget,
+                teamName,
+                setTeamName,
+                points,
+                setPoints,
                 transferSession,
                 setTransferSession,
                 currentlySelected,
