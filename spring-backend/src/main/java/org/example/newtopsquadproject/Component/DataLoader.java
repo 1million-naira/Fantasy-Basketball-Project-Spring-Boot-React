@@ -19,6 +19,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -45,7 +46,14 @@ public class DataLoader implements CommandLineRunner {
 
         try(InputStream inputStream = TypeReference.class.getResourceAsStream("/JSON/cbaTeams.json")){
             List<ProTeam> cbaTeams = objectMapper.readValue(inputStream, cbaTeamsTypeReference);
-            proTeamService.saveAll(cbaTeams);
+            List<String> names = cbaTeams.stream().map(ProTeam::getClubName).toList();
+
+            List<ProTeam> existingTeams = proTeamService.findByClubNameIn(names);
+            Set<String> existingNames = existingTeams.stream().map(ProTeam::getClubName).collect(Collectors.toSet());
+
+            List<ProTeam> teamsToSave = cbaTeams.stream().filter(proTeam -> !existingNames.contains(proTeam.getClubName())).toList();
+            proTeamService.saveAll(teamsToSave);
+
             System.out.println("CBA Teams saved");
         } catch(Exception e){
             System.out.println("Unable to save CBA teams: " + e.getMessage());

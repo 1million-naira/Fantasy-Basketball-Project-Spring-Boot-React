@@ -20,6 +20,9 @@ public interface ProTeamRepo extends CrudRepository<ProTeam, Integer> {
     )
     Optional<ProTeam> findByClubName(String clubName);
 
+
+    List<ProTeam> findByClubNameIn(List<String> names);
+
     @NonNull
     @EntityGraph(
             value="ProTeam.withPlayers",
