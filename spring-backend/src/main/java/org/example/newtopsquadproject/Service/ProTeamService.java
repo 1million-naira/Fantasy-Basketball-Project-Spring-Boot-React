@@ -38,6 +38,8 @@ public class ProTeamService {
         return proTeamRepo.findAll();
     }
 
+    public long count() {return proTeamRepo.count();}
+
 //    public Optional<ProTeam> findByClubNameWithPlayers(String club_name){
 //        return proTeamRepo.findByClubNameAndFetchPlayersEagerly(club_name);
 //    }

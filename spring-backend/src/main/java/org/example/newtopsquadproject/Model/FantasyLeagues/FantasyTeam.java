@@ -25,6 +25,7 @@ public class FantasyTeam {
     @JoinColumn(name="user_id")
     private MyUser myUser;
 
+    @Column(unique = true)
     private String name;
     private int fantasyPoints;
 

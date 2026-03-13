@@ -34,7 +34,10 @@ public abstract class UserLeague {
     @Enumerated(EnumType.STRING)
     private LeagueTypeEnum leagueTypeEnum;
     private LocalDateTime createdAt;
+
+    @Column(unique = true)
     private String name;
+
     private String code;
 
 

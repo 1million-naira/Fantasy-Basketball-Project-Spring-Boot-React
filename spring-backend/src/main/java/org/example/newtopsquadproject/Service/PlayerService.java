@@ -35,6 +35,8 @@ public class PlayerService {
         return playerRepo.findAll();
     }
 
+    public long count(){return playerRepo.count();}
+
     public void saveAll (List<Player> playerStats){
         playerRepo.saveAll(playerStats);
     }

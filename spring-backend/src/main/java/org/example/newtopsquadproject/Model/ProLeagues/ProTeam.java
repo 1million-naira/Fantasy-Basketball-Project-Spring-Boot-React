@@ -29,6 +29,7 @@ public class ProTeam {
     private List<Player> playerList;
 
     @JsonProperty("club_name")
+    @Column(unique = true)
     private String clubName;
 
     private int games_played;

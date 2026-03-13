@@ -17,7 +17,9 @@ public class PlayerInfo {
     @JoinColumn(name="player_id")
     Player player;
 
+    @Column(unique = true)
     private String player_name;
+
     private String league;
     private String nationality;
 

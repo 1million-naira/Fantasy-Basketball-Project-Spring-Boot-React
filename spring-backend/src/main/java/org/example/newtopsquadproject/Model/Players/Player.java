@@ -21,6 +21,7 @@ public class Player {
     @OneToOne(mappedBy="player")
     PlayerImage playerImage;
 
+    @Column(unique = true)
     private String name;
 
     private int fantasyPoints;

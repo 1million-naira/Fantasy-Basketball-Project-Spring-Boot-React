@@ -16,6 +16,7 @@ public class PlayerImage {
     private Player player;
 
     @JsonProperty("player_name")
+    @Column(unique = true)
     private String playerName;
 
 

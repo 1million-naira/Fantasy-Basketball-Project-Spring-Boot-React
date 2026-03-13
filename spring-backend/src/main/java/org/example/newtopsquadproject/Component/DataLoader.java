@@ -42,6 +42,7 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         TypeReference<List<ProTeam>> cbaTeamsTypeReference = new TypeReference<List<ProTeam>>() {};
+
         try(InputStream inputStream = TypeReference.class.getResourceAsStream("/JSON/cbaTeams.json")){
             List<ProTeam> cbaTeams = objectMapper.readValue(inputStream, cbaTeamsTypeReference);
             proTeamService.saveAll(cbaTeams);
