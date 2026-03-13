@@ -3,28 +3,41 @@
 
 > The frontend is currently in a prototype stage and may not provide the best user experience. Improvements are planned.
 
+## Sign Up/Login screen
+<img width="1509" height="764" alt="Screenshot 2026-03-08 at 23 32 35" src="https://github.com/user-attachments/assets/82e09279-3cff-4f65-81d4-0cd3a1d7656e" />
 
 
 ## Home screen
-<img width="1512" height="943" alt="Screenshot 2026-02-07 at 01 18 46" src="https://github.com/user-attachments/assets/3734463f-8c1a-41da-85d2-81d4653a2a5f" />
+
+<img width="1512" height="943" alt="Screenshot 2026-03-08 at 23 34 25" src="https://github.com/user-attachments/assets/b0404cea-6317-4c56-a8a6-8fec14aa8a4b" />
+
 
 
 ## Edit team screen (Make changes with existing players in your team)
-<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 00 43" src="https://github.com/user-attachments/assets/9f42f8c8-f267-460a-b905-a3d18e8797fc" />
+<img width="1512" height="943" alt="Screenshot 2026-03-08 at 23 35 00" src="https://github.com/user-attachments/assets/f65fb45a-c43f-4e98-8036-102b65096840" />
+
+
+## Create Team screen (Create your team for the first time)
+<img width="1512" height="941" alt="Screenshot 2026-03-08 at 23 39 34" src="https://github.com/user-attachments/assets/19a70aec-b10c-42af-9ee3-4a3c1e18f2d3" />
 
 
 ## Transfer screen (Add new players to your team)
-<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 03 06" src="https://github.com/user-attachments/assets/bcf7ba5c-1a53-411f-a0df-a5015bc057e8" />
+<img width="1512" height="943" alt="Screenshot 2026-03-08 at 23 35 39" src="https://github.com/user-attachments/assets/0a2d9f34-f2ee-40fc-a72f-495b334eda86" />
 
-
-## Admin screen (Includes admin features such as enabling/disabling transfers and moderating users)
-<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 08 33" src="https://github.com/user-attachments/assets/890168c6-e91c-4160-9f6c-41d98b91e8eb" />
 
 ## League screen (View a league that you are part of)
-<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 02 18" src="https://github.com/user-attachments/assets/1b93f534-47db-44c5-b247-251150c1f641" />
+<img width="1512" height="943" alt="Screenshot 2026-03-08 at 23 36 46" src="https://github.com/user-attachments/assets/1bded044-2cd9-4dc8-9e34-8b9b048f8afa" />
+
+## Create League screen (Create a league)
+<img width="1512" height="659" alt="Screenshot 2026-03-08 at 23 37 38" src="https://github.com/user-attachments/assets/51dccc31-34e2-4d43-93cc-585225a56f8a" />
+
+## Admin screen (Includes admin features such as enabling/disabling transfers and moderating users) CURRENTLY BEING REVAMPED
+<img width="1512" height="943" alt="Screenshot 2026-02-07 at 04 08 33" src="https://github.com/user-attachments/assets/890168c6-e91c-4160-9f6c-41d98b91e8eb" />
+
 
 
 # How to run the project
+The project is currently in the process of being deployed for showcasing, please bare with me!
 
 ## Hello
 1. First, please clone the repository using the command:
