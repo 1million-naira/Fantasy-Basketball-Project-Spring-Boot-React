@@ -31,4 +31,6 @@ public interface FantasyTeamRepo extends CrudRepository<FantasyTeam, Integer> {
 
     Boolean existsByMyUserId(int id);
 
+    Boolean existsByName(String name);
+
 }

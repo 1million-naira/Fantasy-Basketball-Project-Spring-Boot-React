@@ -64,6 +64,10 @@ public class FantasyTeamService {
             throw new ValidationException("User: " + myUser.getUsername() + " has already created team. A user can only have one team");
         }
 
+        if(fantasyTeamRepo.existsByName(name)){
+            throw new ValidationException("Already a team named: " + name + ": Choose a unique team name");
+        }
+
         FantasyTeam fantasyTeam = new FantasyTeam(myUser);
         fantasyTeam.setName(name);
         fantasyTeamRepo.save(fantasyTeam);
