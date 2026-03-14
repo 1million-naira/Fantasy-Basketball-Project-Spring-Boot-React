@@ -65,7 +65,13 @@ public class DataLoader implements CommandLineRunner {
             Map<String, ProTeam> proTeamsByName = proTeamService.findAll().stream().collect(Collectors.toMap(ProTeam::getClubName
                     , Function.identity()));
 
+            List<String> findAllPlayerNames = playerService.findAll().stream().map(Player::getName).toList();
+            List<Player> newPlayers = new ArrayList<>();
+
             for(Player p : players){
+                if(findAllPlayerNames.contains(p.getName())){
+                    continue;
+                }
                 ProTeam proTeam = proTeamsByName.get(p.getTeam_name());
                 if(proTeam == null){
                     System.out.println(p.getName() + " Team not found: " + p.getTeam_name());
@@ -74,9 +80,10 @@ public class DataLoader implements CommandLineRunner {
                 proTeam.getPlayerList().add(p);
                 p.setProLeague(ProLeagueEnum.CBA);
                 p.setProTeam(proTeam);
+                newPlayers.add(p);
             }
             proTeamService.saveAll(new ArrayList<>(proTeamsByName.values()));
-            playerService.saveAll(players);
+            playerService.saveAll(newPlayers);
 
             System.out.println("Players saved");
         } catch(Exception e){
@@ -87,9 +94,15 @@ public class DataLoader implements CommandLineRunner {
         TypeReference<List<PlayerInfo>> playerInfoTypeReference = new TypeReference<List<PlayerInfo>>() {};
         try(InputStream inputStream = TypeReference.class.getResourceAsStream("/JSON/cbaPlayerInfo.json")){
             List<PlayerInfo> playerInfoList = objectMapper.readValue(inputStream, playerInfoTypeReference);
+            List<PlayerInfo> newPlayerInfoList = new ArrayList<>();
             Map<String, Player> playersByName = playerService.findAll().stream().collect(Collectors.toMap(Player::getName, Function.identity()));
+
+            List<String> findAllPlayerInfoNames = playerInfoService.findAll().stream().map(PlayerInfo::getPlayer_name).toList();
             for(PlayerInfo p : playerInfoList){
                 try{
+                    if(findAllPlayerInfoNames.contains(p.getPlayer_name())){
+                        continue;
+                    }
                     Player player = playersByName.get(p.getPlayer_name());
                     if(player == null){
                         System.out.println(p.getPlayer_name() + " was not found");
@@ -98,12 +111,14 @@ public class DataLoader implements CommandLineRunner {
 
                     p.setPlayer(player);
                     player.setPlayerInfo(p);
+
+                    newPlayerInfoList.add(p);
                 } catch(Exception e){
                     System.out.println(p.getPlayer_name() + ": " + e.getMessage());
                 }
 
             }
-            playerInfoService.saveAll(playerInfoList);
+            playerInfoService.saveAll(newPlayerInfoList);
             playerService.saveAll(new ArrayList<>(playersByName.values()));
             System.out.println("Player Info saved");
         }catch(Exception e){
@@ -114,12 +129,16 @@ public class DataLoader implements CommandLineRunner {
         TypeReference<List<PlayerImage>> playerImageTypeReference = new TypeReference<List<PlayerImage>>() {};
         try(InputStream inputStream = TypeReference.class.getResourceAsStream("/JSON/cbaPlayerImages.json")){
             List<PlayerImage> playerImageList = objectMapper.readValue(inputStream, playerImageTypeReference);
+            List<PlayerImage> newPlayerImageList = new ArrayList<>();
+
             Map<String, Player> playersByName = playerService.findAll().stream().collect(Collectors.toMap(Player::getName, Function.identity()));
-
-
+            List<String> findAllPlayerImageNames = playerImageService.findAll().stream().map(PlayerImage::getPlayerName).toList();
             for(PlayerImage p : playerImageList){
 
                 try{
+                    if(findAllPlayerImageNames.contains(p.getPlayerName())){
+                        continue;
+                    }
                     Player player = playersByName.get(p.getPlayerName());
                     if(player == null){
                         System.out.println(p.getPlayerName() + " was not found");
@@ -127,11 +146,13 @@ public class DataLoader implements CommandLineRunner {
                     }
                     p.setPlayer(player);
                     player.setPlayerImage(p);
+
+                    newPlayerImageList.add(p);
                 } catch(Exception e){
                     System.out.println(p.getPlayerName() + ": " + e.getMessage());
                 }
             }
-            playerImageService.saveAll(playerImageList);
+            playerImageService.saveAll(newPlayerImageList);
             playerService.saveAll(playersByName.values().stream().toList());
             System.out.println("Player Images saved");
 

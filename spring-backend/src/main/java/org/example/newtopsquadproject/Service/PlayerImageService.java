@@ -38,4 +38,6 @@ public class PlayerImageService {
     public void saveAll(List<PlayerImage> playerImageList){
         playerImageRepo.saveAll(playerImageList);
     }
+
+    public List<PlayerImage> findAll(){return playerImageRepo.findAll();}
 }

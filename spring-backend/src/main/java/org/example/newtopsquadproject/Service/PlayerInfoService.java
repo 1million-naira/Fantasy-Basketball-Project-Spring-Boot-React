@@ -22,7 +22,7 @@ public class PlayerInfoService {
         playerInfoRepo.saveAll(playerInfoList);
     }
 
-    public Iterable<PlayerInfo> findAll(){
+    public List<PlayerInfo> findAll(){
         return playerInfoRepo.findAll();
     }
 
